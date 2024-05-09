@@ -1,0 +1,1390 @@
+nohup: ignoring input
+Wed Mar 27 08:24:23 2024 dipu | git hash:001860c9-dirty
+[2024-03-27 08:24:32.90997] [fatal] [157891] [config.cpp:34] Config:
+[2024-03-27 08:24:32.91070] [info] [157891] [config.cpp:138] SocVersion:Ascend910B3
+[2024-03-27 08:24:32.91089] [fatal] [157891] [config.cpp:49] IsStreamSyncEveryRunnerEnable: 0, IsStreamSyncEveryKernelEnable: 0, IsStreamSyncEveryOperationEnable: 0
+[2024-03-27 08:24:32.91098] [fatal] [157891] [config.cpp:52] IsOpsRunnerSetupCacheEnable: 1, KernelCacheType: 3, LocalKernelCacheCount: 1, GlobalKernelCacheCount: 5
+[2024-03-27 08:24:32.91107] [fatal] [157891] [config.cpp:55] IsUsingProfiling: 0, KernelCacheTilingSize: 10240, IsCompareTilingEveryKernelEnable: 0
+[2024-03-27 08:24:32.91114] [fatal] [157891] [config.cpp:57] WorkspaceMemAllocAlgType: 1, IsworkspaceMemAllocGlobal: 0
+[2024-03-27 08:24:32.91148] [info] [157891] [graph_operation.cpp:116] start check  graph.
+[2024-03-27 08:24:32.91165] [info] [157891] [graph_operation.cpp:151] check  graph success.
+[2024-03-27 08:24:32.91190] [info] [157891] [operation_base.cpp:311] GraphOperation_0 setup start, variantPack:inTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+inTensors[1]: dtype: 1, format: 2, shape:[4096, 4096], dataSize:33554432
+inTensors[2]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+inTensors[3]: dtype: 1, format: 2, shape:[4096, 4096], dataSize:33554432
+outTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+
+[2024-03-27 08:24:32.91218] [info] [157891] [operation_base.cpp:200] GraphOperation_0 inTensorsSize:4outTensorsSize:1
+[2024-03-27 08:24:32.91324] [info] [157891] [matmul_ops_runner.cpp:30] MatmulOpsRunner:0 MatmulOpsRunnerMatmulOpsRunner::MatmulOpsRunner called
+[2024-03-27 08:24:32.91395] [info] [157891] [matmul_ops_runner.cpp:30] MatmulOpsRunner:0 MatmulOpsRunnerMatmulOpsRunner::MatmulOpsRunner called
+[2024-03-27 08:24:32.91460] [info] [157891] [elewise_ops_runner.cpp:27] ElewiseOpsRunner::ElewiseOpsRunner called
+[2024-03-27 08:24:32.91535] [info] [157891] [graph_operation.cpp:281] GraphOperation_0 runner graph:
+inTensors[0]:dtype: -1, format: -1, shape:[], dataSize:0
+inTensors[1]:dtype: -1, format: -1, shape:[], dataSize:0
+inTensors[2]:dtype: -1, format: -1, shape:[], dataSize:0
+inTensors[3]:dtype: -1, format: -1, shape:[], dataSize:0
+outTensors[0]:dtype: -1, format: -1, shape:[], dataSize:0
+internalTensors[0]:dtype: -1, format: -1, shape:[], dataSize:0
+internalTensors[1]:dtype: -1, format: -1, shape:[], dataSize:0
+nodes:3
+node[0] opeation:0x3af458c0, operationName:MatmulOperation, runner:0x3af6aa60, runnerName:MatmulOpsRunner
+node[0]:dtype: -1, format: -1, shape:[], dataSize:0
+node[0]:dtype: -1, format: -1, shape:[], dataSize:0
+node[0]:dtype: -1, format: -1, shape:[], dataSize:0
+node[1] opeation:0x3af4a980, operationName:MatmulOperation, runner:0x3af90400, runnerName:MatmulOpsRunner
+node[1]:dtype: -1, format: -1, shape:[], dataSize:0
+node[1]:dtype: -1, format: -1, shape:[], dataSize:0
+node[1]:dtype: -1, format: -1, shape:[], dataSize:0
+node[2] opeation:0x3af4fa40, operationName:ElewiseOperation, runner:0x3afb5da0, runnerName:ElewiseOpsRunner
+node[2]:dtype: -1, format: -1, shape:[], dataSize:0
+node[2]:dtype: -1, format: -1, shape:[], dataSize:0
+node[2]:dtype: -1, format: -1, shape:[], dataSize:0
+
+[2024-03-27 08:24:32.91553] [info] [157891] [graph_runner.cpp:137] GraphOperationRunner_0:0 setup start
+[2024-03-27 08:24:32.91564] [info] [157891] [graph_runner.cpp:309] GraphOperationRunner_0:0  node[0] infer shape start
+[2024-03-27 08:24:32.91573] [info] [157891] [graph_runner.cpp:311] GraphOperationRunner_0:0  node[0] MatmulOpsRunner intensor[0] dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+[2024-03-27 08:24:32.91584] [info] [157891] [graph_runner.cpp:311] GraphOperationRunner_0:0  node[0] MatmulOpsRunner intensor[1] dtype: 1, format: 2, shape:[4096, 4096], dataSize:33554432
+[2024-03-27 08:24:32.91595] [info] [157891] [operation_base.cpp:121] MatmulOperation_0_0 infer shape start
+[2024-03-27 08:24:32.91602] [info] [157891] [operation_base.cpp:123] MatmulOperation_0_0 infer shape inTensorDescs[0]:dtype: 1, format: 2, shape:[1, 4096]
+[2024-03-27 08:24:32.91610] [info] [157891] [operation_base.cpp:123] MatmulOperation_0_0 infer shape inTensorDescs[1]:dtype: 1, format: 2, shape:[4096, 4096]
+[2024-03-27 08:24:32.91652] [info] [157891] [operation_base.cpp:162] MatmulOperation_0_0 infer shape check success
+[2024-03-27 08:24:32.91662] [info] [157891] [operation_base.cpp:147] MatmulOperation_0_0 infer shape outTensorDescs[0]:dtype: 1, format: 2, shape:[1, 4096]
+[2024-03-27 08:24:32.91670] [info] [157891] [graph_runner.cpp:325] GraphOperationRunner_0:0 node[0] MatmulOpsRunner outTensorDescs[0] dtype: 1, format: 2, shape:[1, 4096]
+[2024-03-27 08:24:32.91679] [info] [157891] [graph_runner.cpp:328] GraphOperationRunner_0:0 node[0] infer shape end
+[2024-03-27 08:24:32.91687] [info] [157891] [block_mem_allocation_solver.cpp:28] BlockMemAllocationSolver::Malloc, blockSize:8192
+[2024-03-27 08:24:32.91695] [info] [157891] [graph_runner.cpp:338] GraphOperationRunner_0:0 node[0] MatmulOpsRunner malloc outTensors[0] dataSize:8192
+[2024-03-27 08:24:32.91703] [info] [157891] [graph_runner.cpp:347] GraphOperationRunner_0:0 node[0] MatmulOpsRunner outTensors[0] dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+[2024-03-27 08:24:32.91712] [info] [157891] [graph_runner.cpp:309] GraphOperationRunner_0:0  node[1] infer shape start
+[2024-03-27 08:24:32.91719] [info] [157891] [graph_runner.cpp:311] GraphOperationRunner_0:0  node[1] MatmulOpsRunner intensor[0] dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+[2024-03-27 08:24:32.91728] [info] [157891] [graph_runner.cpp:311] GraphOperationRunner_0:0  node[1] MatmulOpsRunner intensor[1] dtype: 1, format: 2, shape:[4096, 4096], dataSize:33554432
+[2024-03-27 08:24:32.91736] [info] [157891] [operation_base.cpp:121] MatmulOperation_0_1 infer shape start
+[2024-03-27 08:24:32.91743] [info] [157891] [operation_base.cpp:123] MatmulOperation_0_1 infer shape inTensorDescs[0]:dtype: 1, format: 2, shape:[1, 4096]
+[2024-03-27 08:24:32.91750] [info] [157891] [operation_base.cpp:123] MatmulOperation_0_1 infer shape inTensorDescs[1]:dtype: 1, format: 2, shape:[4096, 4096]
+[2024-03-27 08:24:32.91757] [info] [157891] [operation_base.cpp:162] MatmulOperation_0_1 infer shape check success
+[2024-03-27 08:24:32.91764] [info] [157891] [operation_base.cpp:147] MatmulOperation_0_1 infer shape outTensorDescs[0]:dtype: 1, format: 2, shape:[1, 4096]
+[2024-03-27 08:24:32.91771] [info] [157891] [graph_runner.cpp:325] GraphOperationRunner_0:0 node[1] MatmulOpsRunner outTensorDescs[0] dtype: 1, format: 2, shape:[1, 4096]
+[2024-03-27 08:24:32.91779] [info] [157891] [graph_runner.cpp:328] GraphOperationRunner_0:0 node[1] infer shape end
+[2024-03-27 08:24:32.91786] [info] [157891] [block_mem_allocation_solver.cpp:28] BlockMemAllocationSolver::Malloc, blockSize:8192
+[2024-03-27 08:24:32.91792] [info] [157891] [graph_runner.cpp:338] GraphOperationRunner_0:0 node[1] MatmulOpsRunner malloc outTensors[0] dataSize:8192
+[2024-03-27 08:24:32.91800] [info] [157891] [graph_runner.cpp:347] GraphOperationRunner_0:0 node[1] MatmulOpsRunner outTensors[0] dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+[2024-03-27 08:24:32.91808] [info] [157891] [graph_runner.cpp:309] GraphOperationRunner_0:0  node[2] infer shape start
+[2024-03-27 08:24:32.91815] [info] [157891] [graph_runner.cpp:311] GraphOperationRunner_0:0  node[2] ElewiseOpsRunner intensor[0] dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+[2024-03-27 08:24:32.91823] [info] [157891] [graph_runner.cpp:311] GraphOperationRunner_0:0  node[2] ElewiseOpsRunner intensor[1] dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+[2024-03-27 08:24:32.91832] [info] [157891] [operation_base.cpp:121] ElewiseOperation_0_2 infer shape start
+[2024-03-27 08:24:32.91838] [info] [157891] [operation_base.cpp:123] ElewiseOperation_0_2 infer shape inTensorDescs[0]:dtype: 1, format: 2, shape:[1, 4096]
+[2024-03-27 08:24:32.91845] [info] [157891] [operation_base.cpp:123] ElewiseOperation_0_2 infer shape inTensorDescs[1]:dtype: 1, format: 2, shape:[1, 4096]
+[2024-03-27 08:24:32.91854] [info] [157891] [operation_base.cpp:162] ElewiseOperation_0_2 infer shape check success
+[2024-03-27 08:24:32.91868] [info] [157891] [operation_base.cpp:147] ElewiseOperation_0_2 infer shape outTensorDescs[0]:dtype: 1, format: 2, shape:[1, 4096]
+[2024-03-27 08:24:32.91876] [info] [157891] [graph_runner.cpp:325] GraphOperationRunner_0:0 node[2] ElewiseOpsRunner outTensorDescs[0] dtype: 1, format: 2, shape:[1, 4096]
+[2024-03-27 08:24:32.91885] [info] [157891] [graph_runner.cpp:328] GraphOperationRunner_0:0 node[2] infer shape end
+[2024-03-27 08:24:32.91892] [info] [157891] [graph_runner.cpp:344] GraphOperationRunner_0:0 node[2] outTensors[0] is not internal tensor
+[2024-03-27 08:24:32.91899] [info] [157891] [graph_runner.cpp:347] GraphOperationRunner_0:0 node[2] ElewiseOpsRunner outTensors[0] dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+[2024-03-27 08:24:32.91908] [info] [157891] [graph_runner.cpp:354] GraphOperationRunner_0:0  node[2] ElewiseOpsRunner free tensor:0x3af5f788
+[2024-03-27 08:24:32.91916] [info] [157891] [block_mem_allocation_solver.cpp:54] BlockMemAllocationSolver::Free, blockAddress:0
+[2024-03-27 08:24:32.91922] [info] [157891] [graph_runner.cpp:354] GraphOperationRunner_0:0  node[2] ElewiseOpsRunner free tensor:0x3af5f7f0
+[2024-03-27 08:24:32.91929] [info] [157891] [block_mem_allocation_solver.cpp:54] BlockMemAllocationSolver::Free, blockAddress:8192
+[2024-03-27 08:24:32.91936] [info] [157891] [mem_allocation_solver.cpp:26] MemAllocationSolver::GetSize 16384
+[2024-03-27 08:24:32.91945] [info] [157891] [mem_allocation_solver.cpp:32] MemAllocationSolver::GetMallocSize 16384
+[2024-03-27 08:24:32.91951] [info] [157891] [mem_allocation_solver.cpp:26] MemAllocationSolver::GetSize 16384
+[2024-03-27 08:24:32.91943] [info] [157891] [graph_runner.cpp:278] GraphOperationRunner_0:0  malloc size:16384, real size:16384
+[2024-03-27 08:24:32.91963] [info] [157891] [graph_runner.cpp:365] GraphOperationRunner_0:0  node[0] setup start
+[2024-03-27 08:24:32.91971] [info] [157891] [ops_runner.cpp:136] MatmulOpsRunner_0_0:0  setup start, runnerVariantPack:
+ tilingBufferSize:0, workspaceBufferSize:0, intermediateBufferSize:0
+inTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+inTensors[1]: dtype: 1, format: 2, shape:[4096, 4096], dataSize:33554432
+outTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+
+[2024-03-27 08:24:32.91994] [info] [157891] [matmul_ops_runner.cpp:36] MatmulOpsRunner_0_0:0 MatmulOpsRunner, OpsRunnerVariantPack:
+[2024-03-27 08:24:32.92019] [info] [157891] [matmul_ops_runner.cpp:57] MatmulOpsRunner_0_0:0 MatmulOpsRunnerMatmulOpsRunner SetupKernelGraph910b
+[2024-03-27 08:24:32.92223] [info] [157891] [ops_runner.cpp:178] MatmulOpsRunner_0_0:0  Setup start, kernel graph:
+inTensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192
+inTensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432
+outTensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192
+node[0] inTensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192
+node[0] inTensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432
+node[0] outTensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192
+
+[2024-03-27 08:24:32.92254] [info] [157891] [ops_runner.cpp:549] MatmulOpsRunner_0_0:0  runnerVariantPack inTensor size:2, outTensor size:1
+[2024-03-27 08:24:32.93835] [info] [157891] [op_register.h:37] register operation ActivationOperation
+[2024-03-27 08:24:32.93862] [info] [157891] [op_register.h:46] register tactic FastGeluF16Tactic of operation ActivationOperation
+[2024-03-27 08:24:32.93871] [info] [157891] [op_register.h:46] register tactic GeluF32Tactic of operation ActivationOperation
+[2024-03-27 08:24:32.93879] [info] [157891] [op_register.h:46] register tactic GeluF16Tactic of operation ActivationOperation
+[2024-03-27 08:24:32.93885] [info] [157891] [op_register.h:46] register tactic ReluF32Tactic of operation ActivationOperation
+[2024-03-27 08:24:32.93892] [info] [157891] [op_register.h:46] register tactic SwishF16Tactic of operation ActivationOperation
+[2024-03-27 08:24:32.93899] [info] [157891] [op_register.h:46] register tactic LogF16Tactic of operation ActivationOperation
+[2024-03-27 08:24:32.93916] [info] [157891] [op_register.h:46] register tactic LogF32Tactic of operation ActivationOperation
+[2024-03-27 08:24:32.93925] [info] [157891] [op_register.h:37] register operation AsStridedOperation
+[2024-03-27 08:24:32.93934] [info] [157891] [op_register.h:46] register tactic AsStridedF16Int64Tactic of operation AsStridedOperation
+[2024-03-27 08:24:32.93941] [info] [157891] [op_register.h:46] register tactic AsStridedInt64Int64Tactic of operation AsStridedOperation
+[2024-03-27 08:24:32.93948] [info] [157891] [op_register.h:46] register tactic AddF16Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.93954] [info] [157891] [op_register.h:46] register tactic AddF32Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.93963] [info] [157891] [op_register.h:46] register tactic CastF16toF32Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.93970] [info] [157891] [op_register.h:46] register tactic CastF32toF16Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.93977] [info] [157891] [op_register.h:46] register tactic CastWideTactic of operation ElewiseOperation
+[2024-03-27 08:24:32.93984] [info] [157891] [op_register.h:46] register tactic CosF16Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.93990] [info] [157891] [op_register.h:46] register tactic CosF32Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.93997] [info] [157891] [op_register.h:46] register tactic EqualF16Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94003] [info] [157891] [op_register.h:46] register tactic EqualF32Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94009] [info] [157891] [op_register.h:37] register operation ElewiseOperation
+[2024-03-27 08:24:32.94015] [info] [157891] [op_register.h:46] register tactic GreaterInt64Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94022] [info] [157891] [op_register.h:46] register tactic GreaterF16Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94029] [info] [157891] [op_register.h:46] register tactic GreaterF32Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94035] [info] [157891] [op_register.h:46] register tactic LessInt64Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94042] [info] [157891] [op_register.h:46] register tactic LessF16Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94048] [info] [157891] [op_register.h:46] register tactic LessF32Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94054] [info] [157891] [op_register.h:46] register tactic LogicalAndInt8Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94061] [info] [157891] [op_register.h:46] register tactic LogicalNotTactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94067] [info] [157891] [op_register.h:46] register tactic LogicalOrInt8Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94074] [info] [157891] [op_register.h:46] register tactic MulF16Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94080] [info] [157891] [op_register.h:46] register tactic MulF32Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94087] [info] [157891] [op_register.h:46] register tactic MulsF16Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94093] [info] [157891] [op_register.h:46] register tactic MulsF32Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94100] [info] [157891] [op_register.h:46] register tactic QuantF16Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94106] [info] [157891] [op_register.h:46] register tactic RealDivF32Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94113] [info] [157891] [op_register.h:46] register tactic RealDivF16Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94119] [info] [157891] [op_register.h:46] register tactic SinF16Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94125] [info] [157891] [op_register.h:46] register tactic SinF32Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94131] [info] [157891] [op_register.h:46] register tactic NegF16Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94138] [info] [157891] [op_register.h:46] register tactic SubF16Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94151] [info] [157891] [op_register.h:46] register tactic SubInt64Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94158] [info] [157891] [op_register.h:46] register tactic TanhF16Tactic of operation ElewiseOperation
+[2024-03-27 08:24:32.94167] [info] [157891] [op_register.h:37] register operation ExpandOperation
+[2024-03-27 08:24:32.94175] [info] [157891] [op_register.h:46] register tactic ExpandF16Tactic of operation ExpandOperation
+[2024-03-27 08:24:32.94181] [info] [157891] [op_register.h:37] register operation ConcatOperation
+[2024-03-27 08:24:32.94188] [info] [157891] [op_register.h:46] register tactic ConcatF16Input2Tactic of operation ConcatOperation
+[2024-03-27 08:24:32.94194] [info] [157891] [op_register.h:37] register operation CopyOperation
+[2024-03-27 08:24:32.94201] [info] [157891] [op_register.h:46] register tactic ViewCopyInt64Tactic of operation CopyOperation
+[2024-03-27 08:24:32.94208] [info] [157891] [op_register.h:46] register tactic ViewCopyInt32Tactic of operation CopyOperation
+[2024-03-27 08:24:32.94214] [info] [157891] [op_register.h:46] register tactic ViewCopyF32Tactic of operation CopyOperation
+[2024-03-27 08:24:32.94220] [info] [157891] [op_register.h:46] register tactic ViewCopyF16Tactic of operation CopyOperation
+[2024-03-27 08:24:32.94226] [info] [157891] [op_register.h:37] register operation CumsumOperation
+[2024-03-27 08:24:32.94233] [info] [157891] [op_register.h:46] register tactic CumsumF16Int64Tactic of operation CumsumOperation
+[2024-03-27 08:24:32.94239] [info] [157891] [op_register.h:37] register operation FillOperation
+[2024-03-27 08:24:32.94246] [info] [157891] [op_register.h:46] register tactic FillF16Tactic of operation FillOperation
+[2024-03-27 08:24:32.94253] [info] [157891] [op_register.h:46] register tactic MaskedFillF16Tactic of operation FillOperation
+[2024-03-27 08:24:32.94259] [info] [157891] [op_register.h:46] register tactic MaskedFillInt32Tactic of operation FillOperation
+[2024-03-27 08:24:32.94266] [info] [157891] [op_register.h:37] register operation GatherOperation
+[2024-03-27 08:24:32.94273] [info] [157891] [op_register.h:46] register tactic GatherF16Int64Tactic of operation GatherOperation
+[2024-03-27 08:24:32.94279] [info] [157891] [op_register.h:46] register tactic GatherF16Int32Tactic of operation GatherOperation
+[2024-03-27 08:24:32.94285] [info] [157891] [op_register.h:46] register tactic GatherF32Int64Tactic of operation GatherOperation
+[2024-03-27 08:24:32.94291] [info] [157891] [op_register.h:46] register tactic GatherF32Int32Tactic of operation GatherOperation
+[2024-03-27 08:24:32.94297] [info] [157891] [op_register.h:37] register operation MatMulOperation
+[2024-03-27 08:24:32.94304] [info] [157891] [op_register.h:46] register tactic BatchMatMulNdF16Tactic of operation MatMulOperation
+[2024-03-27 08:24:32.94310] [info] [157891] [op_register.h:46] register tactic BatchMatMulNdF16TbTactic of operation MatMulOperation
+[2024-03-27 08:24:32.94317] [info] [157891] [op_register.h:46] register tactic BatchMatMulNzF16TATactic of operation MatMulOperation
+[2024-03-27 08:24:32.94323] [info] [157891] [op_register.h:46] register tactic BatchMatMulNzF16TATBTactic of operation MatMulOperation
+[2024-03-27 08:24:32.94329] [info] [157891] [op_register.h:46] register tactic BatchMatMulNzF16Tactic of operation MatMulOperation
+[2024-03-27 08:24:32.94335] [info] [157891] [op_register.h:46] register tactic BatchMatMulNzF16TBTactic of operation MatMulOperation
+[2024-03-27 08:24:32.94342] [info] [157891] [op_register.h:46] register tactic MatMulNdF16Tactic of operation MatMulOperation
+[2024-03-27 08:24:32.94348] [info] [157891] [op_register.h:46] register tactic MatMulNdF16TbTactic of operation MatMulOperation
+[2024-03-27 08:24:32.94354] [info] [157891] [op_register.h:46] register tactic MatMulNzF16TATactic of operation MatMulOperation
+[2024-03-27 08:24:32.94361] [info] [157891] [op_register.h:46] register tactic MatMulNzF16TATBTactic of operation MatMulOperation
+[2024-03-27 08:24:32.94373] [info] [157891] [op_register.h:46] register tactic MatMulNzF16Tactic of operation MatMulOperation
+[2024-03-27 08:24:32.94380] [info] [157891] [op_register.h:46] register tactic MatMulNzF16TBTactic of operation MatMulOperation
+[2024-03-27 08:24:32.94386] [info] [157891] [op_register.h:46] register tactic PpMatMulF16MixTactic of operation MatMulOperation
+[2024-03-27 08:24:32.94393] [info] [157891] [op_register.h:46] register tactic PpMatMulF16Tactic of operation MatMulOperation
+[2024-03-27 08:24:32.94400] [info] [157891] [op_register.h:46] register tactic PpMatMulF16OptTactic of operation MatMulOperation
+[2024-03-27 08:24:32.94406] [info] [157891] [op_register.h:46] register tactic PpMatMulI8Tactic of operation MatMulOperation
+[2024-03-27 08:24:32.94412] [info] [157891] [op_register.h:46] register tactic PpMatMulI8NzTactic of operation MatMulOperation
+[2024-03-27 08:24:32.94418] [info] [157891] [op_register.h:46] register tactic PpMatMulI8NzCompressTactic of operation MatMulOperation
+[2024-03-27 08:24:32.94425] [info] [157891] [op_register.h:46] register tactic PpMatMulNdGemvTactic of operation MatMulOperation
+[2024-03-27 08:24:32.94431] [info] [157891] [op_register.h:46] register tactic PpMatMulNzF16Tactic of operation MatMulOperation
+[2024-03-27 08:24:32.94438] [info] [157891] [op_register.h:37] register operation MixOperation
+[2024-03-27 08:24:32.94444] [info] [157891] [op_register.h:46] register tactic KVCacheNdTactic of operation MixOperation
+[2024-03-27 08:24:32.94451] [info] [157891] [op_register.h:46] register tactic KVCacheNzTactic of operation MixOperation
+[2024-03-27 08:24:32.94457] [info] [157891] [op_register.h:46] register tactic KVCacheNdDynamicBatchTactic of operation MixOperation
+[2024-03-27 08:24:32.94464] [info] [157891] [op_register.h:46] register tactic RopeTactic of operation MixOperation
+[2024-03-27 08:24:32.94470] [info] [157891] [op_register.h:46] register tactic UnpadFlashAttentionNdTactic of operation MixOperation
+[2024-03-27 08:24:32.94477] [info] [157891] [op_register.h:46] register tactic UnpadDynamicBatchFlashAttentionNdTactic of operation MixOperation
+[2024-03-27 08:24:32.94483] [info] [157891] [op_register.h:46] register tactic UnpadFlashAttentionEncoderNdTactic of operation MixOperation
+[2024-03-27 08:24:32.94490] [info] [157891] [op_register.h:46] register tactic UnpadFlashAttentionAlibiMaskTactic of operation MixOperation
+[2024-03-27 08:24:32.94496] [info] [157891] [op_register.h:46] register tactic UnpadFlashAttentionDecoderNdTactic of operation MixOperation
+[2024-03-27 08:24:32.94503] [info] [157891] [op_register.h:46] register tactic PagedAttentionNdTactic of operation MixOperation
+[2024-03-27 08:24:32.94509] [info] [157891] [op_register.h:46] register tactic ReshapeAndCacheNdTactic of operation MixOperation
+[2024-03-27 08:24:32.94516] [info] [157891] [op_register.h:46] register tactic UnpadFlashAttentionNzTactic of operation MixOperation
+[2024-03-27 08:24:32.94522] [info] [157891] [op_register.h:46] register tactic UnpadAlibiFlashAttentionNzTactic of operation MixOperation
+[2024-03-27 08:24:32.94528] [info] [157891] [op_register.h:46] register tactic UnpadFlashAttentionNzEncoderTactic of operation MixOperation
+[2024-03-27 08:24:32.94534] [info] [157891] [op_register.h:46] register tactic UnpadFlashAttentionNzDecoderTactic of operation MixOperation
+[2024-03-27 08:24:32.94541] [info] [157891] [op_register.h:37] register operation MultinomialOperation
+[2024-03-27 08:24:32.94547] [info] [157891] [op_register.h:46] register tactic MultinomialTactic of operation MultinomialOperation
+[2024-03-27 08:24:32.94553] [info] [157891] [op_register.h:37] register operation NormOperation
+[2024-03-27 08:24:32.94559] [info] [157891] [op_register.h:46] register tactic LayernormF16Tactic of operation NormOperation
+[2024-03-27 08:24:32.94566] [info] [157891] [op_register.h:46] register tactic LayernormF32Tactic of operation NormOperation
+[2024-03-27 08:24:32.94573] [info] [157891] [op_register.h:46] register tactic LayerNormF16QuantTactic of operation NormOperation
+[2024-03-27 08:24:32.94585] [info] [157891] [op_register.h:46] register tactic PostLayerNormF16Tactic of operation NormOperation
+[2024-03-27 08:24:32.94592] [info] [157891] [op_register.h:46] register tactic PostLayerNormF16QuantTactic of operation NormOperation
+[2024-03-27 08:24:32.94598] [info] [157891] [op_register.h:46] register tactic RmsNormTactic of operation NormOperation
+[2024-03-27 08:24:32.94605] [info] [157891] [op_register.h:46] register tactic RmsNormQuantTactic of operation NormOperation
+[2024-03-27 08:24:32.94611] [info] [157891] [op_register.h:46] register tactic RmsPreNormQuantTactic of operation NormOperation
+[2024-03-27 08:24:32.94617] [info] [157891] [op_register.h:37] register operation ReduceOperation
+[2024-03-27 08:24:32.94624] [info] [157891] [op_register.h:46] register tactic ReduceMaxInt32Tactic of operation ReduceOperation
+[2024-03-27 08:24:32.94630] [info] [157891] [op_register.h:46] register tactic ReduceMinInt32Tactic of operation ReduceOperation
+[2024-03-27 08:24:32.94636] [info] [157891] [op_register.h:37] register operation ReverseOperation
+[2024-03-27 08:24:32.94643] [info] [157891] [op_register.h:46] register tactic ReverseF16Tactic of operation ReverseOperation
+[2024-03-27 08:24:32.94649] [info] [157891] [op_register.h:37] register operation SliceOperation
+[2024-03-27 08:24:32.94656] [info] [157891] [op_register.h:46] register tactic SliceF16Int64Tactic of operation SliceOperation
+[2024-03-27 08:24:32.94662] [info] [157891] [op_register.h:46] register tactic SliceInt8Int64Tactic of operation SliceOperation
+[2024-03-27 08:24:32.94669] [info] [157891] [op_register.h:46] register tactic SliceInt32Int64Tactic of operation SliceOperation
+[2024-03-27 08:24:32.94675] [info] [157891] [op_register.h:37] register operation SoftmaxOperation
+[2024-03-27 08:24:32.94682] [info] [157891] [op_register.h:46] register tactic SoftmaxF16Tactic of operation SoftmaxOperation
+[2024-03-27 08:24:32.94688] [info] [157891] [op_register.h:46] register tactic SoftmaxF32Tactic of operation SoftmaxOperation
+[2024-03-27 08:24:32.94694] [info] [157891] [op_register.h:37] register operation SortOperation
+[2024-03-27 08:24:32.94701] [info] [157891] [op_register.h:46] register tactic TopKDescF16Tactic of operation SortOperation
+[2024-03-27 08:24:32.94707] [info] [157891] [op_register.h:37] register operation SplitOperation
+[2024-03-27 08:24:32.94713] [info] [157891] [op_register.h:46] register tactic SplitF16Output2Tactic of operation SplitOperation
+[2024-03-27 08:24:32.94720] [info] [157891] [op_register.h:46] register tactic SplitF16Output3Tactic of operation SplitOperation
+[2024-03-27 08:24:32.94726] [info] [157891] [op_register.h:46] register tactic SplitInt64Output2Tactic of operation SplitOperation
+[2024-03-27 08:24:32.94732] [info] [157891] [op_register.h:37] register operation TransdataOperation
+[2024-03-27 08:24:32.94739] [info] [157891] [op_register.h:46] register tactic TransdataNzToNdTactic of operation TransdataOperation
+[2024-03-27 08:24:32.94745] [info] [157891] [op_register.h:46] register tactic TransdataNdToNzTactic of operation TransdataOperation
+[2024-03-27 08:24:32.94752] [info] [157891] [op_register.h:46] register tactic TransdataNdToNzInt8Tactic of operation TransdataOperation
+[2024-03-27 08:24:32.94758] [info] [157891] [op_register.h:37] register operation TransposeOperation
+[2024-03-27 08:24:32.94764] [info] [157891] [op_register.h:46] register tactic TransposeF16Tactic of operation TransposeOperation
+[2024-03-27 08:24:32.94771] [info] [157891] [op_register.h:46] register tactic TransposeInt64Tactic of operation TransposeOperation
+[2024-03-27 08:24:32.94783] [info] [157891] [host_so_dl.cpp:36] Create operation ActivationOperation
+[2024-03-27 08:24:32.94790] [info] [157891] [host_so_dl.cpp:36] Create operation AsStridedOperation
+[2024-03-27 08:24:32.94798] [info] [157891] [host_so_dl.cpp:36] Create operation ElewiseOperation
+[2024-03-27 08:24:32.94807] [info] [157891] [host_so_dl.cpp:36] Create operation ExpandOperation
+[2024-03-27 08:24:32.94814] [info] [157891] [host_so_dl.cpp:36] Create operation ConcatOperation
+[2024-03-27 08:24:32.94827] [info] [157891] [host_so_dl.cpp:36] Create operation CopyOperation
+[2024-03-27 08:24:32.94835] [info] [157891] [host_so_dl.cpp:36] Create operation CumsumOperation
+[2024-03-27 08:24:32.94859] [info] [157891] [host_so_dl.cpp:36] Create operation FillOperation
+[2024-03-27 08:24:32.94867] [info] [157891] [host_so_dl.cpp:36] Create operation GatherOperation
+[2024-03-27 08:24:32.94873] [info] [157891] [host_so_dl.cpp:36] Create operation MatMulOperation
+[2024-03-27 08:24:32.94882] [info] [157891] [host_so_dl.cpp:36] Create operation MixOperation
+[2024-03-27 08:24:32.94890] [info] [157891] [host_so_dl.cpp:36] Create operation MultinomialOperation
+[2024-03-27 08:24:32.94897] [info] [157891] [host_so_dl.cpp:36] Create operation NormOperation
+[2024-03-27 08:24:32.94905] [info] [157891] [host_so_dl.cpp:36] Create operation ReduceOperation
+[2024-03-27 08:24:32.94912] [info] [157891] [host_so_dl.cpp:36] Create operation ReverseOperation
+[2024-03-27 08:24:32.94919] [info] [157891] [host_so_dl.cpp:36] Create operation SliceOperation
+[2024-03-27 08:24:32.94926] [info] [157891] [host_so_dl.cpp:36] Create operation SoftmaxOperation
+[2024-03-27 08:24:32.94933] [info] [157891] [host_so_dl.cpp:36] Create operation SortOperation
+[2024-03-27 08:24:32.94940] [info] [157891] [host_so_dl.cpp:36] Create operation SplitOperation
+[2024-03-27 08:24:32.94947] [info] [157891] [host_so_dl.cpp:36] Create operation TransdataOperation
+[2024-03-27 08:24:32.94954] [info] [157891] [host_so_dl.cpp:36] Create operation TransposeOperation
+[2024-03-27 08:24:32.95108] [info] [157891] [rtbackend.cpp:73] Rt GetDeviceCount Func:1, Rt GetDeviceIDs Func:1, Rt SetDevice Func:1, Rt ResetDevice Func:1, Rt GetDevice Func:1, Rt SetSocVersion Func:1, Rt GetSocVersion Func:1, Rt DeviceGetBareTgid Func:1
+[2024-03-27 08:24:32.95129] [info] [157891] [rtbackend.cpp:95] Rt Malloc Func:1, RtFreeFunc:1, Rt MallocHost Func:1, RtFreeHostFunc:1, Rt Memcpy Func:1, RtMemcpyAsyncFunc:1, Rt MemsetAsync Func: 1, Rt IpcSetMemoryName Func: 1, Rt IpcOpenMemory Func: 1, Rt SetIpcMemPid Func: 1
+[2024-03-27 08:24:32.95144] [info] [157891] [rtbackend.cpp:113] Rt DevBinaryRegister Func:1, Rt DevBinaryUnRegister Func:1, Rt FunctionRegister Func:1, Rt RegisterAllKernel Func:1, Rt KernelLaunch Func:1, Rt KernelLaunchWithHandle Func:1, Rt KernelLaunchWithFlag Func:1
+[2024-03-27 08:24:32.95155] [info] [157891] [rtbackend.cpp:128] Rt StreamCreate Func:1, Rt StreamDestroy Func:1, Rt StreamSynchronize Func:1, Rt GetStreamId Func:1
+[2024-03-27 08:24:32.95164] [info] [157891] [rtbackend.cpp:137] Rt GetC2cCtrlAddr Func:1
+[2024-03-27 08:24:32.95331] [info] [157891] [binfile.cpp:173] Begin to parse bin file
+[2024-03-27 08:24:32.95358] [warn] [157891] [binfile.cpp:270] not process $Version
+[2024-03-27 08:24:32.95373] [info] [157891] [binfile.cpp:243] Parsed object length 62228248
+[2024-03-27 08:24:32.109306] [info] [157891] [binfile.cpp:221] Read binary buffer, size: 62228248, file size: 64558693, current posotion: 2330445
+[2024-03-27 08:24:32.134170] [info] [157891] [device_code.cpp:34] DeviceKernelVersion: ascend910b
+[2024-03-27 08:24:32.134257] [info] [157891] [device_code.cpp:48] RmsPreNormQuantTactic.FileName: rms_pre_norm_quant.json
+[2024-03-27 08:24:32.134275] [info] [157891] [device_code.cpp:48] RmsNormQuantTactic.FileName: rms_norm_quant.json
+[2024-03-27 08:24:32.134291] [info] [157891] [device_code.cpp:48] PostLayerNormF16QuantTactic.FileName: post_layer_norm_quant.json
+[2024-03-27 08:24:32.134306] [info] [157891] [device_code.cpp:48] LayerNormF16QuantTactic.FileName: layer_norm_quant.json
+[2024-03-27 08:24:32.134320] [info] [157891] [device_code.cpp:48] UnpadFlashAttentionNdTactic.FileName: unpad_flashattention.json
+[2024-03-27 08:24:32.134335] [info] [157891] [device_code.cpp:48] UnpadFlashAttentionEncoderNdTactic.FileName: unpad_flashattention_encoder.json
+[2024-03-27 08:24:32.134349] [info] [157891] [device_code.cpp:48] UnpadFlashAttentionDecoderNdTactic.FileName: unpad_flashattention_decoder.json
+[2024-03-27 08:24:32.134363] [info] [157891] [device_code.cpp:48] UnpadFlashAttentionAlibiMaskTactic.FileName: unpad_flashattention_alibimask.json
+[2024-03-27 08:24:32.134411] [info] [157891] [device_code.cpp:48] KVCacheNdDynamicBatchTactic.FileName: kvcache_dynamic_batch.json
+[2024-03-27 08:24:32.134426] [info] [157891] [device_code.cpp:48] PpMatMulNdGemvTactic.FileName: gemv.json
+[2024-03-27 08:24:32.134440] [info] [157891] [device_code.cpp:48] PpMatMulF16OptTactic.FileName: pp_matmul_f16_opt.json
+[2024-03-27 08:24:32.134454] [info] [157891] [device_code.cpp:48] PpMatMulF16MixTactic.FileName: pp_matmul_add.json
+[2024-03-27 08:24:32.134535] [info] [157891] [device_code.cpp:48] ReduceMinInt32Tactic.FileName: ReduceMin_cdb713eb67f49462c2984ac3ae6c0f4c_high_performance.o
+[2024-03-27 08:24:32.134603] [info] [157891] [device_code.cpp:48] ReduceMaxInt32Tactic.FileName: ReduceMax_cdb713eb67f49462c2984ac3ae6c0f4c_high_performance.o
+[2024-03-27 08:24:32.134617] [info] [157891] [device_code.cpp:48] CumsumF16Int64Tactic.FileName: Cumsum_13c985d502038f8b7e784368129973f5_high_performance_deterministic.o
+[2024-03-27 08:24:32.134630] [info] [157891] [device_code.cpp:48] ViewCopyF16Tactic.FileName: ViewCopy_72b715ecac4708ed9afb0acd7628c5ac_high_performance.o
+[2024-03-27 08:24:32.134643] [info] [157891] [device_code.cpp:48] ViewCopyF32Tactic.FileName: ViewCopy_ae89a6900e92bb8a732429ed6902199b_high_performance.o
+[2024-03-27 08:24:32.134854] [info] [157891] [device_code.cpp:48] SliceInt32Int64Tactic.FileName: Slice_b9b91ad79a469f7fcff72949705be0f9_high_performance.o
+[2024-03-27 08:24:32.135020] [info] [157891] [device_code.cpp:48] SliceInt8Int64Tactic.FileName: Slice_fb7ff270e5fa3131c82e1dc8181173ac_high_performance.o
+[2024-03-27 08:24:32.135182] [info] [157891] [device_code.cpp:48] SliceF16Int64Tactic.FileName: Slice_cf62034947577763b2b546efd5444507_high_performance.o
+[2024-03-27 08:24:32.135200] [info] [157891] [device_code.cpp:48] TransposeInt64Tactic.FileName: Transpose_d50b8a38a6a7153bc24c45fb1def9e5a_high_performance.o
+[2024-03-27 08:24:32.135217] [info] [157891] [device_code.cpp:48] TransposeF16Tactic.FileName: Transpose_5ce316c9f935f0585864b2d372bcc322_high_performance.o
+[2024-03-27 08:24:32.135230] [info] [157891] [device_code.cpp:48] CastWideTactic.FileName: cast_wide.json
+[2024-03-27 08:24:32.135254] [info] [157891] [device_code.cpp:48] TransdataNdToNzInt8Tactic.FileName: TransData_d0af419a01b5ec3a7184bc163e49bc06_high_performance.o
+[2024-03-27 08:24:32.135269] [info] [157891] [device_code.cpp:48] SplitInt64Output2Tactic.FileName: SplitD_6dcfbda46ba13b636d81b6723e65de2a_high_performance.o
+[2024-03-27 08:24:32.135282] [info] [157891] [device_code.cpp:48] RopeTactic.FileName: rotary_pos_emb.json
+[2024-03-27 08:24:32.135300] [info] [157891] [device_code.cpp:48] SoftmaxF32Tactic.FileName: SoftmaxV2_291664ae3e88b38b8b46c2efbbea27c9_high_precision.o
+[2024-03-27 08:24:32.135317] [info] [157891] [device_code.cpp:48] SoftmaxF16Tactic.FileName: SoftmaxV2_a8d63cbe8795eef99c620173d4757e59_high_precision.o
+[2024-03-27 08:24:32.135330] [info] [157891] [device_code.cpp:48] ViewCopyInt32Tactic.FileName: ViewCopy_f9503aba4b049bd0a00ec9dd64dc915a_high_performance.o
+[2024-03-27 08:24:32.135344] [info] [157891] [device_code.cpp:48] ReverseF16Tactic.FileName: ReverseV2_5ce316c9f935f0585864b2d372bcc322_high_performance.o
+[2024-03-27 08:24:32.135360] [info] [157891] [device_code.cpp:48] SplitF16Output2Tactic.FileName: SplitD_3b961d1861411527363a37014a1e7f24_high_performance.o
+[2024-03-27 08:24:32.135376] [info] [157891] [device_code.cpp:48] LayernormF32Tactic.FileName: LayerNorm_23ae115d70bd435e4cb966a52be97b55_high_precision.o
+[2024-03-27 08:24:32.135410] [info] [157891] [device_code.cpp:48] TransdataNzToNdTactic.FileName: TransData_cb4c683189d13c2ea9554d47def0c40b_high_performance.o
+[2024-03-27 08:24:32.135426] [info] [157891] [device_code.cpp:48] LayernormF16Tactic.FileName: LayerNorm_11a3e199aeec978c5acef4dcf4ccb2f9_high_precision.o
+[2024-03-27 08:24:32.135439] [info] [157891] [device_code.cpp:48] QuantF16Tactic.FileName: quant.json
+[2024-03-27 08:24:32.135478] [info] [157891] [device_code.cpp:48] GatherF16Int64Tactic.FileName: GatherV2_be5aa9f80f42f9b202a8d0b065733b2e_high_precision.o
+[2024-03-27 08:24:32.135512] [info] [157891] [device_code.cpp:48] GreaterF32Tactic.FileName: Greater_3efaad932f458d7892fdb0715ec85b2b_high_performance.o
+[2024-03-27 08:24:32.135542] [info] [157891] [device_code.cpp:48] GreaterF16Tactic.FileName: Greater_493c5303765d8d03bed3dd3e01206ee8_high_performance.o
+[2024-03-27 08:24:32.135568] [info] [157891] [device_code.cpp:48] EqualF16Tactic.FileName: Equal_493c5303765d8d03bed3dd3e01206ee8_high_performance.o
+[2024-03-27 08:24:32.135581] [info] [157891] [device_code.cpp:48] PpMatMulI8Tactic.FileName: pp_matmul_int8.json
+[2024-03-27 08:24:32.135606] [info] [157891] [device_code.cpp:48] MaskedFillInt32Tactic.FileName: MaskedFill_162b89a80ca9a6e3eb2bd97ef099207a_high_performance.o
+[2024-03-27 08:24:32.135620] [info] [157891] [device_code.cpp:48] UnpadDynamicBatchFlashAttentionNdTactic.FileName: unpad_dynamic_batch_flashattention.json
+[2024-03-27 08:24:32.135681] [info] [157891] [device_code.cpp:48] MatMulNzF16TATBTactic.FileName: MatMulV2_NZ_NZ_FP16_FP16_true_true_all.o
+[2024-03-27 08:24:32.135720] [info] [157891] [device_code.cpp:48] GatherF16Int32Tactic.FileName: GatherV2_928531a1d81513193577298f6c9f77c9_high_precision.o
+[2024-03-27 08:24:32.135734] [info] [157891] [device_code.cpp:48] CosF16Tactic.FileName: Cos_d2db1a80c523e7e59a032c95969880af_high_performance.o
+[2024-03-27 08:24:32.135748] [info] [157891] [device_code.cpp:48] TanhF16Tactic.FileName: Tanh_d2db1a80c523e7e59a032c95969880af_high_precision.o
+[2024-03-27 08:24:32.135772] [info] [157891] [device_code.cpp:48] LogicalOrInt8Tactic.FileName: LogicalOr_91d2a3cdd75d915a368582ec5f440af1_high_performance.o
+[2024-03-27 08:24:32.135786] [info] [157891] [device_code.cpp:48] CastF32toF16Tactic.FileName: Cast_15ccf3aee15572ed7572778d4afbef60_high_performance.o
+[2024-03-27 08:24:32.135800] [info] [157891] [device_code.cpp:48] MulsF16Tactic.FileName: Muls_a8d63cbe8795eef99c620173d4757e59_high_performance.o
+[2024-03-27 08:24:32.135825] [info] [157891] [device_code.cpp:48] LessF16Tactic.FileName: Less_493c5303765d8d03bed3dd3e01206ee8_high_performance.o
+[2024-03-27 08:24:32.135839] [info] [157891] [device_code.cpp:48] LogF32Tactic.FileName: Log_412256dd60fdbbe591b2622c247bd510_high_performance.o
+[2024-03-27 08:24:32.135865] [info] [157891] [device_code.cpp:48] EqualF32Tactic.FileName: Equal_3efaad932f458d7892fdb0715ec85b2b_high_performance.o
+[2024-03-27 08:24:32.135889] [info] [157891] [device_code.cpp:48] GreaterInt64Tactic.FileName: Greater_1ea4da630f56dc1c2d6e7c9a9dd17b11_high_performance.o
+[2024-03-27 08:24:32.135904] [info] [157891] [device_code.cpp:48] LogicalNotTactic.FileName: LogicalNot_c5fb21ce50d8471d9b8df5001b9dc9a5_high_performance.o
+[2024-03-27 08:24:32.135918] [info] [157891] [device_code.cpp:48] GeluF32Tactic.FileName: Gelu_5c5e58e043224cccf51a06108010ae13_high_precision.o
+[2024-03-27 08:24:32.136114] [info] [157891] [device_code.cpp:48] BatchMatMulNdF16TbTactic.FileName: BatchMatMulV2_ND_ND_FP16_FP16_false_true_all.o
+[2024-03-27 08:24:32.136129] [info] [157891] [device_code.cpp:48] GeluF16Tactic.FileName: Gelu_d2db1a80c523e7e59a032c95969880af_high_precision.o
+[2024-03-27 08:24:32.136142] [info] [157891] [device_code.cpp:48] ReluF32Tactic.FileName: Relu_5c5e58e043224cccf51a06108010ae13_high_performance.o
+[2024-03-27 08:24:32.136156] [info] [157891] [device_code.cpp:48] SinF16Tactic.FileName: Sin_d2db1a80c523e7e59a032c95969880af_high_performance.o
+[2024-03-27 08:24:32.136172] [info] [157891] [device_code.cpp:48] AsStridedF16Int64Tactic.FileName: AsStrided_18d3ce49cd18b896ecbd4791ac24cb7a_high_performance.o
+[2024-03-27 08:24:32.136187] [info] [157891] [device_code.cpp:48] SplitF16Output3Tactic.FileName: SplitD_14054dd7113b5bbce742c146f5b48c56_high_performance.o
+[2024-03-27 08:24:32.136365] [info] [157891] [device_code.cpp:48] BatchMatMulNdF16Tactic.FileName: BatchMatMulV2_ND_ND_FP16_FP16_false_false_all.o
+[2024-03-27 08:24:32.136387] [info] [157891] [device_code.cpp:48] SubF16Tactic.FileName: Sub_93b3f8e9594b4018902b635fff3a83c5_high_performance.o
+[2024-03-27 08:24:32.136411] [info] [157891] [device_code.cpp:48] SwishF16Tactic.FileName: Swish_a8d63cbe8795eef99c620173d4757e59_high_performance.o
+[2024-03-27 08:24:32.136434] [info] [157891] [device_code.cpp:48] LessInt64Tactic.FileName: Less_1ea4da630f56dc1c2d6e7c9a9dd17b11_high_performance.o
+[2024-03-27 08:24:32.136448] [info] [157891] [device_code.cpp:48] KVCacheNdTactic.FileName: kvcache.json
+[2024-03-27 08:24:32.136469] [info] [157891] [device_code.cpp:48] RealDivF32Tactic.FileName: RealDiv_ee98c6628030785f610b924ab1557b31_high_precision.o
+[2024-03-27 08:24:32.136490] [info] [157891] [device_code.cpp:48] RealDivF16Tactic.FileName: RealDiv_93b3f8e9594b4018902b635fff3a83c5_high_precision.o
+[2024-03-27 08:24:32.136512] [info] [157891] [device_code.cpp:48] LessF32Tactic.FileName: Less_3efaad932f458d7892fdb0715ec85b2b_high_performance.o
+[2024-03-27 08:24:32.136537] [info] [157891] [device_code.cpp:48] AddF16Tactic.FileName: Add_93b3f8e9594b4018902b635fff3a83c5_high_performance.o
+[2024-03-27 08:24:32.136550] [info] [157891] [device_code.cpp:48] CastF16toF32Tactic.FileName: Cast_1fb1c1a33856de01862630399320fff3_high_performance.o
+[2024-03-27 08:24:32.136572] [info] [157891] [device_code.cpp:48] AddF32Tactic.FileName: Add_ee98c6628030785f610b924ab1557b31_high_performance.o
+[2024-03-27 08:24:32.136586] [info] [157891] [device_code.cpp:48] CosF32Tactic.FileName: Cos_5c5e58e043224cccf51a06108010ae13_high_performance.o
+[2024-03-27 08:24:32.136608] [info] [157891] [device_code.cpp:48] SubInt64Tactic.FileName: Sub_41dadce325b0f810d03359af2a38990b_high_performance.o
+[2024-03-27 08:24:32.136630] [info] [157891] [device_code.cpp:48] MulF16Tactic.FileName: Mul_93b3f8e9594b4018902b635fff3a83c5_high_performance.o
+[2024-03-27 08:24:32.136642] [info] [157891] [device_code.cpp:48] RmsNormTactic.FileName: rms_norm.json
+[2024-03-27 08:24:32.136666] [info] [157891] [device_code.cpp:48] TransdataNdToNzTactic.FileName: TransData_1f7d09915723c246d8ed94ed83374eb7_high_performance.o
+[2024-03-27 08:24:32.136689] [info] [157891] [device_code.cpp:48] MulF32Tactic.FileName: Mul_ee98c6628030785f610b924ab1557b31_high_performance.o
+[2024-03-27 08:24:32.136702] [info] [157891] [device_code.cpp:48] MultinomialTactic.FileName: multinomial.json
+[2024-03-27 08:24:32.136716] [info] [157891] [device_code.cpp:48] FastGeluF16Tactic.FileName: FastGelu_d2db1a80c523e7e59a032c95969880af_high_precision.o
+[2024-03-27 08:24:32.136729] [info] [157891] [device_code.cpp:48] MulsF32Tactic.FileName: Muls_291664ae3e88b38b8b46c2efbbea27c9_high_performance.o
+[2024-03-27 08:24:32.136743] [info] [157891] [device_code.cpp:48] ViewCopyInt64Tactic.FileName: ViewCopy_909c29e82de4713fdb8d5ef20cbcb3c3_high_performance.o
+[2024-03-27 08:24:32.136757] [info] [157891] [device_code.cpp:48] NegF16Tactic.FileName: Neg_d2db1a80c523e7e59a032c95969880af_high_performance.o
+[2024-03-27 08:24:32.136779] [info] [157891] [device_code.cpp:48] FillF16Tactic.FileName: Fill_4f6992c63c49c2fb5cb32f954ba9f06b_high_performance.o
+[2024-03-27 08:24:32.136793] [info] [157891] [device_code.cpp:48] SinF32Tactic.FileName: Sin_5c5e58e043224cccf51a06108010ae13_high_performance.o
+[2024-03-27 08:24:32.136815] [info] [157891] [device_code.cpp:48] MaskedFillF16Tactic.FileName: MaskedFill_991fa70905937c101b95ed9de1637bfc_high_performance.o
+[2024-03-27 08:24:32.137089] [info] [157891] [device_code.cpp:48] MatMulNdF16TbTactic.FileName: MatMulV2_ND_ND_FP16_FP16_false_true_all.o
+[2024-03-27 08:24:32.137113] [info] [157891] [device_code.cpp:48] ExpandF16Tactic.FileName: Expand_be837fe498fad076d01c0ce8dfd3d014_high_performance.o
+[2024-03-27 08:24:32.137130] [info] [157891] [device_code.cpp:48] ConcatF16Input2Tactic.FileName: ConcatD_ac0081dab05f1e5cef852acb8d7e866f_high_performance.o
+[2024-03-27 08:24:32.137152] [info] [157891] [device_code.cpp:48] LogicalAndInt8Tactic.FileName: LogicalAnd_91d2a3cdd75d915a368582ec5f440af1_high_performance.o
+[2024-03-27 08:24:32.137185] [info] [157891] [device_code.cpp:48] GatherF32Int64Tactic.FileName: GatherV2_2d13e5f1492a4db5869bd6ff10d0d1ac_high_precision.o
+[2024-03-27 08:24:32.137198] [info] [157891] [device_code.cpp:48] PagedAttentionNdTactic.FileName: paged_attention.json
+[2024-03-27 08:24:32.137495] [info] [157891] [device_code.cpp:48] MatMulNdF16Tactic.FileName: MatMulV2_ND_ND_FP16_FP16_false_false_all.o
+[2024-03-27 08:24:32.137540] [info] [157891] [device_code.cpp:48] GatherF32Int32Tactic.FileName: GatherV2_618279a26921567d421037acce4dee5b_high_precision.o
+[2024-03-27 08:24:32.137554] [info] [157891] [device_code.cpp:48] PpMatMulF16Tactic.FileName: pp_matmul.json
+[2024-03-27 08:24:32.137605] [info] [157891] [device_code.cpp:48] MatMulNzF16Tactic.FileName: MatMulV2_NZ_NZ_FP16_FP16_false_false_all.o
+[2024-03-27 08:24:32.137618] [info] [157891] [device_code.cpp:48] ReshapeAndCacheNdTactic.FileName: reshape_and_cache.json
+[2024-03-27 08:24:32.137665] [info] [157891] [device_code.cpp:48] MatMulNzF16TATactic.FileName: MatMulV2_NZ_NZ_FP16_FP16_true_false_all.o
+[2024-03-27 08:24:32.137679] [info] [157891] [device_code.cpp:48] LogF16Tactic.FileName: Log_b9e1030977b1dc266a4781fe63584cae_high_performance.o
+[2024-03-27 08:24:32.137723] [info] [157891] [device_code.cpp:48] MatMulNzF16TBTactic.FileName: MatMulV2_NZ_NZ_FP16_FP16_false_true_all.o
+[2024-03-27 08:24:32.137737] [info] [157891] [device_code.cpp:48] PostLayerNormF16Tactic.FileName: post_layer_norm.json
+[2024-03-27 08:24:32.137836] [info] [157891] [device_code.cpp:48] BatchMatMulNzF16TATBTactic.FileName: BatchMatMulV2_NZ_NZ_FP16_FP16_true_true_all.o
+[2024-03-27 08:24:32.137853] [info] [157891] [device_code.cpp:48] TopKDescF16Tactic.FileName: TopKV2_5cc1ed45ef52d7db0697fa437556176a_high_performance.o
+[2024-03-27 08:24:32.137922] [info] [157891] [device_code.cpp:48] BatchMatMulNzF16Tactic.FileName: BatchMatMulV2_NZ_NZ_FP16_FP16_false_false_all.o
+[2024-03-27 08:24:32.137991] [info] [157891] [device_code.cpp:48] BatchMatMulNzF16TATactic.FileName: BatchMatMulV2_NZ_NZ_FP16_FP16_true_false_all.o
+[2024-03-27 08:24:32.138005] [info] [157891] [device_code.cpp:48] AsStridedInt64Int64Tactic.FileName: AsStrided_790e15c983edeb9bbb712783ad7b1d7e_high_performance.o
+[2024-03-27 08:24:32.138083] [info] [157891] [device_code.cpp:48] BatchMatMulNzF16TBTactic.FileName: BatchMatMulV2_NZ_NZ_FP16_FP16_false_true_all.o
+[2024-03-27 08:24:32.138970] [info] [157891] [bin_tactic.cpp:29] Create tactic FastGeluF16Tactic, launch buffer size 24
+[2024-03-27 08:24:32.138997] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:FastGeluF16Tactic
+[2024-03-27 08:24:32.139007] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 4600, magic: 1094799942
+[2024-03-27 08:24:32.139217] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.139237] [info] [157891] [bin_tactic.cpp:29] Create tactic GeluF32Tactic, launch buffer size 24
+[2024-03-27 08:24:32.139245] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:GeluF32Tactic
+[2024-03-27 08:24:32.139252] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 4432, magic: 1094799942
+[2024-03-27 08:24:32.139393] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.139403] [info] [157891] [bin_tactic.cpp:29] Create tactic GeluF16Tactic, launch buffer size 24
+[2024-03-27 08:24:32.139410] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:GeluF16Tactic
+[2024-03-27 08:24:32.139417] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 4624, magic: 1094799942
+[2024-03-27 08:24:32.139551] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.139560] [info] [157891] [bin_tactic.cpp:29] Create tactic ReluF32Tactic, launch buffer size 24
+[2024-03-27 08:24:32.139567] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:ReluF32Tactic
+[2024-03-27 08:24:32.139573] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 3456, magic: 1094799942
+[2024-03-27 08:24:32.139706] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.139728] [info] [157891] [bin_tactic.cpp:29] Create tactic SwishF16Tactic, launch buffer size 32
+[2024-03-27 08:24:32.139736] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:SwishF16Tactic
+[2024-03-27 08:24:32.139743] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 4144, magic: 1094799942
+[2024-03-27 08:24:32.139881] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.139890] [info] [157891] [bin_tactic.cpp:29] Create tactic LogF16Tactic, launch buffer size 24
+[2024-03-27 08:24:32.139897] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:LogF16Tactic
+[2024-03-27 08:24:32.139904] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 3448, magic: 1094799942
+[2024-03-27 08:24:32.140035] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.140043] [info] [157891] [bin_tactic.cpp:29] Create tactic LogF32Tactic, launch buffer size 24
+[2024-03-27 08:24:32.140049] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:LogF32Tactic
+[2024-03-27 08:24:32.140056] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 3448, magic: 1094799942
+[2024-03-27 08:24:32.140187] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.140196] [info] [157891] [bin_tactic.cpp:29] Create tactic AsStridedInt64Int64Tactic, launch buffer size 704
+[2024-03-27 08:24:32.140204] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:AsStridedInt64Int64Tactic
+[2024-03-27 08:24:32.140230] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.140238] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:106136
+[2024-03-27 08:24:32.140301] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.140313] [info] [157891] [bin_tactic.cpp:29] Create tactic AsStridedF16Int64Tactic, launch buffer size 704
+[2024-03-27 08:24:32.140320] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:AsStridedF16Int64Tactic
+[2024-03-27 08:24:32.140340] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.140347] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:101920
+[2024-03-27 08:24:32.140395] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.140404] [info] [157891] [bin_tactic.cpp:29] Create tactic AddF16Tactic, launch buffer size 144
+[2024-03-27 08:24:32.140412] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:AddF16Tactic
+[2024-03-27 08:24:32.140418] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 266616, magic: 1094799942
+[2024-03-27 08:24:32.141736] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.141749] [info] [157891] [bin_tactic.cpp:29] Create tactic AddF32Tactic, launch buffer size 144
+[2024-03-27 08:24:32.141757] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:AddF32Tactic
+[2024-03-27 08:24:32.141764] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 264952, magic: 1094799942
+[2024-03-27 08:24:32.143038] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.143048] [info] [157891] [bin_tactic.cpp:29] Create tactic CastF32toF16Tactic, launch buffer size 24
+[2024-03-27 08:24:32.143055] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:CastF32toF16Tactic
+[2024-03-27 08:24:32.143061] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 3544, magic: 1094799942
+[2024-03-27 08:24:32.143196] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.143204] [info] [157891] [bin_tactic.cpp:29] Create tactic CastF16toF32Tactic, launch buffer size 24
+[2024-03-27 08:24:32.143211] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:CastF16toF32Tactic
+[2024-03-27 08:24:32.143229] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 3544, magic: 1094799942
+[2024-03-27 08:24:32.143365] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.143373] [info] [157891] [bin_tactic.cpp:29] Create tactic CastWideTactic, launch buffer size 0
+[2024-03-27 08:24:32.143380] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:CastWideTactic
+[2024-03-27 08:24:32.143401] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.143407] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:86720
+[2024-03-27 08:24:32.143455] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.143465] [info] [157891] [bin_tactic.cpp:29] Create tactic CosF16Tactic, launch buffer size 24
+[2024-03-27 08:24:32.143472] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:CosF16Tactic
+[2024-03-27 08:24:32.143478] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 6064, magic: 1094799942
+[2024-03-27 08:24:32.143611] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.143619] [info] [157891] [bin_tactic.cpp:29] Create tactic CosF32Tactic, launch buffer size 24
+[2024-03-27 08:24:32.143626] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:CosF32Tactic
+[2024-03-27 08:24:32.143632] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 5840, magic: 1094799942
+[2024-03-27 08:24:32.143763] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.143771] [info] [157891] [bin_tactic.cpp:29] Create tactic EqualF16Tactic, launch buffer size 144
+[2024-03-27 08:24:32.143778] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:EqualF16Tactic
+[2024-03-27 08:24:32.143784] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 288976, magic: 1094799942
+[2024-03-27 08:24:32.145072] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.145082] [info] [157891] [bin_tactic.cpp:29] Create tactic EqualF32Tactic, launch buffer size 144
+[2024-03-27 08:24:32.145089] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:EqualF32Tactic
+[2024-03-27 08:24:32.145095] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 287832, magic: 1094799942
+[2024-03-27 08:24:32.147012] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.147036] [info] [157891] [bin_tactic.cpp:29] Create tactic GreaterF16Tactic, launch buffer size 144
+[2024-03-27 08:24:32.147046] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:GreaterF16Tactic
+[2024-03-27 08:24:32.147053] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 289256, magic: 1094799942
+[2024-03-27 08:24:32.148272] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.148283] [info] [157891] [bin_tactic.cpp:29] Create tactic GreaterInt64Tactic, launch buffer size 144
+[2024-03-27 08:24:32.148290] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:GreaterInt64Tactic
+[2024-03-27 08:24:32.148297] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 499904, magic: 1094799942
+[2024-03-27 08:24:32.149519] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.149529] [info] [157891] [bin_tactic.cpp:29] Create tactic GreaterF32Tactic, launch buffer size 144
+[2024-03-27 08:24:32.149537] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:GreaterF32Tactic
+[2024-03-27 08:24:32.149543] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 288104, magic: 1094799942
+[2024-03-27 08:24:32.150764] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.150786] [info] [157891] [bin_tactic.cpp:29] Create tactic LessF16Tactic, launch buffer size 144
+[2024-03-27 08:24:32.150795] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:LessF16Tactic
+[2024-03-27 08:24:32.150801] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 288888, magic: 1094799942
+[2024-03-27 08:24:32.152007] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.152016] [info] [157891] [bin_tactic.cpp:29] Create tactic LessInt64Tactic, launch buffer size 144
+[2024-03-27 08:24:32.152023] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:LessInt64Tactic
+[2024-03-27 08:24:32.152030] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 499600, magic: 1094799942
+[2024-03-27 08:24:32.153251] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.153262] [info] [157891] [bin_tactic.cpp:29] Create tactic LessF32Tactic, launch buffer size 144
+[2024-03-27 08:24:32.153269] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:LessF32Tactic
+[2024-03-27 08:24:32.153276] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 287776, magic: 1094799942
+[2024-03-27 08:24:32.154489] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.154498] [info] [157891] [bin_tactic.cpp:29] Create tactic LogicalAndInt8Tactic, launch buffer size 144
+[2024-03-27 08:24:32.154506] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:LogicalAndInt8Tactic
+[2024-03-27 08:24:32.154512] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 367856, magic: 1094799942
+[2024-03-27 08:24:32.155746] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.155756] [info] [157891] [bin_tactic.cpp:29] Create tactic LogicalNotTactic, launch buffer size 24
+[2024-03-27 08:24:32.155763] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:LogicalNotTactic
+[2024-03-27 08:24:32.155769] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 4136, magic: 1094799942
+[2024-03-27 08:24:32.155895] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.155904] [info] [157891] [bin_tactic.cpp:29] Create tactic LogicalOrInt8Tactic, launch buffer size 144
+[2024-03-27 08:24:32.155911] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:LogicalOrInt8Tactic
+[2024-03-27 08:24:32.155917] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 367720, magic: 1094799942
+[2024-03-27 08:24:32.157764] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.157837] [info] [157891] [bin_tactic.cpp:29] Create tactic MulF16Tactic, launch buffer size 144
+[2024-03-27 08:24:32.157852] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:MulF16Tactic
+[2024-03-27 08:24:32.157861] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 266616, magic: 1094799942
+[2024-03-27 08:24:32.159105] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.159118] [info] [157891] [bin_tactic.cpp:29] Create tactic MulF32Tactic, launch buffer size 144
+[2024-03-27 08:24:32.159126] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:MulF32Tactic
+[2024-03-27 08:24:32.159132] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 264952, magic: 1094799942
+[2024-03-27 08:24:32.160372] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.160384] [info] [157891] [bin_tactic.cpp:29] Create tactic MulsF32Tactic, launch buffer size 32
+[2024-03-27 08:24:32.160391] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:MulsF32Tactic
+[2024-03-27 08:24:32.160397] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 3472, magic: 1094799942
+[2024-03-27 08:24:32.160561] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.160571] [info] [157891] [bin_tactic.cpp:29] Create tactic MulsF16Tactic, launch buffer size 32
+[2024-03-27 08:24:32.160578] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:MulsF16Tactic
+[2024-03-27 08:24:32.160585] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 3472, magic: 1094799942
+[2024-03-27 08:24:32.160738] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.160751] [info] [157891] [bin_tactic.cpp:29] Create tactic QuantF16Tactic, launch buffer size 0
+[2024-03-27 08:24:32.160759] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:QuantF16Tactic
+[2024-03-27 08:24:32.160787] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.160796] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:75952
+[2024-03-27 08:24:32.160854] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.160868] [info] [157891] [bin_tactic.cpp:29] Create tactic RealDivF32Tactic, launch buffer size 144
+[2024-03-27 08:24:32.160877] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:RealDivF32Tactic
+[2024-03-27 08:24:32.160883] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 265360, magic: 1094799942
+[2024-03-27 08:24:32.162114] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.162124] [info] [157891] [bin_tactic.cpp:29] Create tactic RealDivF16Tactic, launch buffer size 144
+[2024-03-27 08:24:32.162131] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:RealDivF16Tactic
+[2024-03-27 08:24:32.162137] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 349968, magic: 1094799942
+[2024-03-27 08:24:32.163369] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.163378] [info] [157891] [bin_tactic.cpp:29] Create tactic SinF16Tactic, launch buffer size 24
+[2024-03-27 08:24:32.163385] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:SinF16Tactic
+[2024-03-27 08:24:32.163392] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 5664, magic: 1094799942
+[2024-03-27 08:24:32.163520] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.163530] [info] [157891] [bin_tactic.cpp:29] Create tactic SinF32Tactic, launch buffer size 24
+[2024-03-27 08:24:32.163537] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:SinF32Tactic
+[2024-03-27 08:24:32.163543] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 5472, magic: 1094799942
+[2024-03-27 08:24:32.163669] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.163679] [info] [157891] [bin_tactic.cpp:29] Create tactic NegF16Tactic, launch buffer size 24
+[2024-03-27 08:24:32.163686] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:NegF16Tactic
+[2024-03-27 08:24:32.163692] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 3456, magic: 1094799942
+[2024-03-27 08:24:32.163818] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.163827] [info] [157891] [bin_tactic.cpp:29] Create tactic SubF16Tactic, launch buffer size 144
+[2024-03-27 08:24:32.163835] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:SubF16Tactic
+[2024-03-27 08:24:32.163841] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 266840, magic: 1094799942
+[2024-03-27 08:24:32.165056] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.165065] [info] [157891] [bin_tactic.cpp:29] Create tactic SubInt64Tactic, launch buffer size 144
+[2024-03-27 08:24:32.165100] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:SubInt64Tactic
+[2024-03-27 08:24:32.165108] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 457312, magic: 1094799942
+[2024-03-27 08:24:32.166344] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.166358] [info] [157891] [bin_tactic.cpp:29] Create tactic TanhF16Tactic, launch buffer size 24
+[2024-03-27 08:24:32.166365] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:TanhF16Tactic
+[2024-03-27 08:24:32.166371] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 4264, magic: 1094799942
+[2024-03-27 08:24:32.166498] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.166510] [info] [157891] [bin_tactic.cpp:29] Create tactic ExpandF16Tactic, launch buffer size 144
+[2024-03-27 08:24:32.166517] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:ExpandF16Tactic
+[2024-03-27 08:24:32.166523] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 155520, magic: 1094799942
+[2024-03-27 08:24:32.167748] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.167760] [info] [157891] [bin_tactic.cpp:29] Create tactic ConcatF16Input2Tactic, launch buffer size 40
+[2024-03-27 08:24:32.167767] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:ConcatF16Input2Tactic
+[2024-03-27 08:24:32.167773] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 64096, magic: 1094799942
+[2024-03-27 08:24:32.168281] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.168291] [info] [157891] [bin_tactic.cpp:29] Create tactic ViewCopyF32Tactic, launch buffer size 80
+[2024-03-27 08:24:32.168298] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:ViewCopyF32Tactic
+[2024-03-27 08:24:32.168319] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.168326] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:7928
+[2024-03-27 08:24:32.168374] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.168383] [info] [157891] [bin_tactic.cpp:29] Create tactic ViewCopyF16Tactic, launch buffer size 80
+[2024-03-27 08:24:32.168390] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:ViewCopyF16Tactic
+[2024-03-27 08:24:32.168409] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.168416] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:22376
+[2024-03-27 08:24:32.168464] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.168473] [info] [157891] [bin_tactic.cpp:29] Create tactic ViewCopyInt64Tactic, launch buffer size 80
+[2024-03-27 08:24:32.168480] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:ViewCopyInt64Tactic
+[2024-03-27 08:24:32.168499] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.168506] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:7912
+[2024-03-27 08:24:32.168551] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.168559] [info] [157891] [bin_tactic.cpp:29] Create tactic ViewCopyInt32Tactic, launch buffer size 80
+[2024-03-27 08:24:32.168566] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:ViewCopyInt32Tactic
+[2024-03-27 08:24:32.168585] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.168591] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:7848
+[2024-03-27 08:24:32.168636] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.168646] [info] [157891] [bin_tactic.cpp:29] Create tactic CumsumF16Int64Tactic, launch buffer size 64
+[2024-03-27 08:24:32.168664] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:CumsumF16Int64Tactic
+[2024-03-27 08:24:32.168685] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.168691] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:17448
+[2024-03-27 08:24:32.168736] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.168745] [info] [157891] [bin_tactic.cpp:29] Create tactic FillF16Tactic, launch buffer size 144
+[2024-03-27 08:24:32.168752] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:FillF16Tactic
+[2024-03-27 08:24:32.168759] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 155312, magic: 1094799942
+[2024-03-27 08:24:32.169994] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.170005] [info] [157891] [bin_tactic.cpp:29] Create tactic MaskedFillInt32Tactic, launch buffer size 208
+[2024-03-27 08:24:32.170012] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:MaskedFillInt32Tactic
+[2024-03-27 08:24:32.170018] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 499224, magic: 1094799942
+[2024-03-27 08:24:32.171213] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.171224] [info] [157891] [bin_tactic.cpp:29] Create tactic MaskedFillF16Tactic, launch buffer size 208
+[2024-03-27 08:24:32.171231] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:MaskedFillF16Tactic
+[2024-03-27 08:24:32.171237] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 466032, magic: 1094799942
+[2024-03-27 08:24:32.172411] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.172421] [info] [157891] [bin_tactic.cpp:29] Create tactic GatherF16Int64Tactic, launch buffer size 56
+[2024-03-27 08:24:32.172428] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:GatherF16Int64Tactic
+[2024-03-27 08:24:32.172435] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 264456, magic: 1094799942
+[2024-03-27 08:24:32.175332] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.175342] [info] [157891] [bin_tactic.cpp:29] Create tactic GatherF32Int32Tactic, launch buffer size 56
+[2024-03-27 08:24:32.175350] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:GatherF32Int32Tactic
+[2024-03-27 08:24:32.175356] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 262504, magic: 1094799942
+[2024-03-27 08:24:32.178269] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.178280] [info] [157891] [bin_tactic.cpp:29] Create tactic GatherF16Int32Tactic, launch buffer size 56
+[2024-03-27 08:24:32.178287] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:GatherF16Int32Tactic
+[2024-03-27 08:24:32.178293] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 255968, magic: 1094799942
+[2024-03-27 08:24:32.181231] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.181243] [info] [157891] [bin_tactic.cpp:29] Create tactic GatherF32Int64Tactic, launch buffer size 56
+[2024-03-27 08:24:32.181250] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:GatherF32Int64Tactic
+[2024-03-27 08:24:32.181256] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 271056, magic: 1094799942
+[2024-03-27 08:24:32.184131] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.184142] [info] [157891] [bin_tactic.cpp:29] Create tactic BatchMatMulNdF16Tactic, launch buffer size 184
+[2024-03-27 08:24:32.184149] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:BatchMatMulNdF16Tactic
+[2024-03-27 08:24:32.184171] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 4323960, magic: 1095320387
+[2024-03-27 08:24:32.200959] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.200987] [info] [157891] [bin_tactic.cpp:29] Create tactic BatchMatMulNdF16TbTactic, launch buffer size 184
+[2024-03-27 08:24:32.200996] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:BatchMatMulNdF16TbTactic
+[2024-03-27 08:24:32.201003] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 4572504, magic: 1095320387
+[2024-03-27 08:24:32.217940] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.217963] [info] [157891] [bin_tactic.cpp:29] Create tactic BatchMatMulNzF16TATBTactic, launch buffer size 184
+[2024-03-27 08:24:32.217972] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:BatchMatMulNzF16TATBTactic
+[2024-03-27 08:24:32.217979] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 1608704, magic: 1095320387
+[2024-03-27 08:24:32.226165] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.226183] [info] [157891] [bin_tactic.cpp:29] Create tactic BatchMatMulNzF16Tactic, launch buffer size 184
+[2024-03-27 08:24:32.226191] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:BatchMatMulNzF16Tactic
+[2024-03-27 08:24:32.226198] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 1580968, magic: 1095320387
+[2024-03-27 08:24:32.234443] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.234459] [info] [157891] [bin_tactic.cpp:29] Create tactic BatchMatMulNzF16TATactic, launch buffer size 184
+[2024-03-27 08:24:32.234467] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:BatchMatMulNzF16TATactic
+[2024-03-27 08:24:32.234474] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 1521952, magic: 1095320387
+[2024-03-27 08:24:32.242709] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.242725] [info] [157891] [bin_tactic.cpp:29] Create tactic BatchMatMulNzF16TBTactic, launch buffer size 184
+[2024-03-27 08:24:32.242733] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:BatchMatMulNzF16TBTactic
+[2024-03-27 08:24:32.242739] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 1635448, magic: 1095320387
+[2024-03-27 08:24:32.251448] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.251470] [info] [157891] [bin_tactic.cpp:29] Create tactic MatMulNdF16TbTactic, launch buffer size 136
+[2024-03-27 08:24:32.251479] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:MatMulNdF16TbTactic
+[2024-03-27 08:24:32.251486] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 11585272, magic: 1095320387
+[2024-03-27 08:24:32.298521] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.298546] [info] [157891] [bin_tactic.cpp:29] Create tactic MatMulNdF16Tactic, launch buffer size 136
+[2024-03-27 08:24:32.298555] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:MatMulNdF16Tactic
+[2024-03-27 08:24:32.298562] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 11319760, magic: 1095320387
+[2024-03-27 08:24:32.345962] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.345989] [info] [157891] [bin_tactic.cpp:29] Create tactic MatMulNzF16TATBTactic, launch buffer size 136
+[2024-03-27 08:24:32.345999] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:MatMulNzF16TATBTactic
+[2024-03-27 08:24:32.346006] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 539744, magic: 1095320387
+[2024-03-27 08:24:32.350521] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.350557] [info] [157891] [bin_tactic.cpp:29] Create tactic MatMulNzF16Tactic, launch buffer size 136
+[2024-03-27 08:24:32.350567] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:MatMulNzF16Tactic
+[2024-03-27 08:24:32.350574] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 559080, magic: 1095320387
+[2024-03-27 08:24:32.355089] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.355103] [info] [157891] [bin_tactic.cpp:29] Create tactic MatMulNzF16TATactic, launch buffer size 136
+[2024-03-27 08:24:32.355111] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:MatMulNzF16TATactic
+[2024-03-27 08:24:32.355118] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 533056, magic: 1095320387
+[2024-03-27 08:24:32.360092] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.360107] [info] [157891] [bin_tactic.cpp:29] Create tactic MatMulNzF16TBTactic, launch buffer size 136
+[2024-03-27 08:24:32.360115] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:MatMulNzF16TBTactic
+[2024-03-27 08:24:32.360121] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 552456, magic: 1095320387
+[2024-03-27 08:24:32.364652] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.364668] [info] [157891] [bin_tactic.cpp:29] Create tactic PpMatMulF16MixTactic, launch buffer size 0
+[2024-03-27 08:24:32.364677] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:PpMatMulF16MixTactic
+[2024-03-27 08:24:32.364701] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.364709] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:37440
+[2024-03-27 08:24:32.364770] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.364781] [info] [157891] [bin_tactic.cpp:29] Create tactic PpMatMulF16Tactic, launch buffer size 0
+[2024-03-27 08:24:32.364788] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:PpMatMulF16Tactic
+[2024-03-27 08:24:32.364807] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.364814] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:52912
+[2024-03-27 08:24:32.364861] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.364873] [info] [157891] [bin_tactic.cpp:29] Create tactic PpMatMulF16OptTactic, launch buffer size 0
+[2024-03-27 08:24:32.364880] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:PpMatMulF16OptTactic
+[2024-03-27 08:24:32.364900] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.364907] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:50328
+[2024-03-27 08:24:32.364956] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.364965] [info] [157891] [bin_tactic.cpp:29] Create tactic PpMatMulI8Tactic, launch buffer size 0
+[2024-03-27 08:24:32.364972] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:PpMatMulI8Tactic
+[2024-03-27 08:24:32.364992] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.364999] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:51648
+[2024-03-27 08:24:32.365047] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.365055] [info] [157891] [bin_tactic.cpp:29] Create tactic PpMatMulI8NzTactic, launch buffer size 0
+[2024-03-27 08:24:32.365062] [warn] [157891] [bin_tactic.cpp:53] No found device code for tactic PpMatMulI8NzTactic
+[2024-03-27 08:24:32.365070] [info] [157891] [bin_tactic.cpp:29] Create tactic PpMatMulI8NzCompressTactic, launch buffer size 0
+[2024-03-27 08:24:32.365094] [warn] [157891] [bin_tactic.cpp:53] No found device code for tactic PpMatMulI8NzCompressTactic
+[2024-03-27 08:24:32.365103] [info] [157891] [bin_tactic.cpp:29] Create tactic PpMatMulNdGemvTactic, launch buffer size 0
+[2024-03-27 08:24:32.365110] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:PpMatMulNdGemvTactic
+[2024-03-27 08:24:32.365130] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.365137] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:8320
+[2024-03-27 08:24:32.365183] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.365193] [info] [157891] [bin_tactic.cpp:29] Create tactic PpMatMulNzF16Tactic, launch buffer size 0
+[2024-03-27 08:24:32.365200] [warn] [157891] [bin_tactic.cpp:53] No found device code for tactic PpMatMulNzF16Tactic
+[2024-03-27 08:24:32.365214] [info] [157891] [bin_tactic.cpp:29] Create tactic KVCacheNzTactic, launch buffer size 0
+[2024-03-27 08:24:32.365221] [warn] [157891] [bin_tactic.cpp:53] No found device code for tactic KVCacheNzTactic
+[2024-03-27 08:24:32.365228] [info] [157891] [bin_tactic.cpp:29] Create tactic KVCacheNdDynamicBatchTactic, launch buffer size 0
+[2024-03-27 08:24:32.365234] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:KVCacheNdDynamicBatchTactic
+[2024-03-27 08:24:32.365254] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.365261] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:72160
+[2024-03-27 08:24:32.365306] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.365315] [info] [157891] [bin_tactic.cpp:29] Create tactic KVCacheNdTactic, launch buffer size 0
+[2024-03-27 08:24:32.365322] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:KVCacheNdTactic
+[2024-03-27 08:24:32.365340] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.365347] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:72120
+[2024-03-27 08:24:32.365393] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.365402] [info] [157891] [bin_tactic.cpp:29] Create tactic RopeTactic, launch buffer size 0
+[2024-03-27 08:24:32.365409] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:RopeTactic
+[2024-03-27 08:24:32.365428] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.365434] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:78792
+[2024-03-27 08:24:32.365480] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.365489] [info] [157891] [bin_tactic.cpp:29] Create tactic UnpadFlashAttentionAlibiMaskTactic, launch buffer size 0
+[2024-03-27 08:24:32.365496] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:UnpadFlashAttentionAlibiMaskTactic
+[2024-03-27 08:24:32.365515] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.365521] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:18832
+[2024-03-27 08:24:32.365571] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.365580] [info] [157891] [bin_tactic.cpp:29] Create tactic UnpadFlashAttentionDecoderNdTactic, launch buffer size 0
+[2024-03-27 08:24:32.365587] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:UnpadFlashAttentionDecoderNdTactic
+[2024-03-27 08:24:32.365606] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.365612] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:12048
+[2024-03-27 08:24:32.365661] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.365670] [info] [157891] [bin_tactic.cpp:29] Create tactic UnpadFlashAttentionNdTactic, launch buffer size 0
+[2024-03-27 08:24:32.365687] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:UnpadFlashAttentionNdTactic
+[2024-03-27 08:24:32.365708] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.365715] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:18696
+[2024-03-27 08:24:32.365763] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.365773] [info] [157891] [bin_tactic.cpp:29] Create tactic UnpadDynamicBatchFlashAttentionNdTactic, launch buffer size 0
+[2024-03-27 08:24:32.365780] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:UnpadDynamicBatchFlashAttentionNdTactic
+[2024-03-27 08:24:32.365800] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.365807] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:18848
+[2024-03-27 08:24:32.365855] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.365864] [info] [157891] [bin_tactic.cpp:29] Create tactic UnpadFlashAttentionEncoderNdTactic, launch buffer size 0
+[2024-03-27 08:24:32.365871] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:UnpadFlashAttentionEncoderNdTactic
+[2024-03-27 08:24:32.365889] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.365896] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:18376
+[2024-03-27 08:24:32.365944] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.365953] [info] [157891] [bin_tactic.cpp:29] Create tactic PagedAttentionNdTactic, launch buffer size 0
+[2024-03-27 08:24:32.365960] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:PagedAttentionNdTactic
+[2024-03-27 08:24:32.365979] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.365986] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:11440
+[2024-03-27 08:24:32.366032] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.366040] [info] [157891] [bin_tactic.cpp:29] Create tactic ReshapeAndCacheNdTactic, launch buffer size 0
+[2024-03-27 08:24:32.366047] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:ReshapeAndCacheNdTactic
+[2024-03-27 08:24:32.366065] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.366072] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:5440
+[2024-03-27 08:24:32.366119] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.366127] [info] [157891] [bin_tactic.cpp:29] Create tactic UnpadFlashAttentionNzEncoderTactic, launch buffer size 0
+[2024-03-27 08:24:32.366134] [warn] [157891] [bin_tactic.cpp:53] No found device code for tactic UnpadFlashAttentionNzEncoderTactic
+[2024-03-27 08:24:32.366141] [info] [157891] [bin_tactic.cpp:29] Create tactic UnpadFlashAttentionNzDecoderTactic, launch buffer size 0
+[2024-03-27 08:24:32.366147] [warn] [157891] [bin_tactic.cpp:53] No found device code for tactic UnpadFlashAttentionNzDecoderTactic
+[2024-03-27 08:24:32.366154] [info] [157891] [bin_tactic.cpp:29] Create tactic UnpadAlibiFlashAttentionNzTactic, launch buffer size 0
+[2024-03-27 08:24:32.366160] [warn] [157891] [bin_tactic.cpp:53] No found device code for tactic UnpadAlibiFlashAttentionNzTactic
+[2024-03-27 08:24:32.366167] [info] [157891] [bin_tactic.cpp:29] Create tactic UnpadFlashAttentionNzTactic, launch buffer size 0
+[2024-03-27 08:24:32.366174] [warn] [157891] [bin_tactic.cpp:53] No found device code for tactic UnpadFlashAttentionNzTactic
+[2024-03-27 08:24:32.366181] [info] [157891] [bin_tactic.cpp:29] Create tactic MultinomialTactic, launch buffer size 0
+[2024-03-27 08:24:32.366188] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:MultinomialTactic
+[2024-03-27 08:24:32.366217] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.366225] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:75712
+[2024-03-27 08:24:32.366272] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.366281] [info] [157891] [bin_tactic.cpp:29] Create tactic LayernormF16Tactic, launch buffer size 40
+[2024-03-27 08:24:32.366288] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:LayernormF16Tactic
+[2024-03-27 08:24:32.366294] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 169008, magic: 1094799942
+[2024-03-27 08:24:32.366743] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.366753] [info] [157891] [bin_tactic.cpp:29] Create tactic LayernormF32Tactic, launch buffer size 40
+[2024-03-27 08:24:32.366760] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:LayernormF32Tactic
+[2024-03-27 08:24:32.366766] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 165232, magic: 1094799942
+[2024-03-27 08:24:32.367209] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.367218] [info] [157891] [bin_tactic.cpp:29] Create tactic LayerNormF16QuantTactic, launch buffer size 0
+[2024-03-27 08:24:32.367225] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:LayerNormF16QuantTactic
+[2024-03-27 08:24:32.367244] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.367251] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:88272
+[2024-03-27 08:24:32.367296] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.367305] [info] [157891] [bin_tactic.cpp:29] Create tactic PostLayerNormF16Tactic, launch buffer size 0
+[2024-03-27 08:24:32.367312] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:PostLayerNormF16Tactic
+[2024-03-27 08:24:32.367331] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.367338] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:94928
+[2024-03-27 08:24:32.367382] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.367391] [info] [157891] [bin_tactic.cpp:29] Create tactic PostLayerNormF16QuantTactic, launch buffer size 0
+[2024-03-27 08:24:32.367398] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:PostLayerNormF16QuantTactic
+[2024-03-27 08:24:32.367416] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.367422] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:102112
+[2024-03-27 08:24:32.367467] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.367475] [info] [157891] [bin_tactic.cpp:29] Create tactic RmsNormTactic, launch buffer size 0
+[2024-03-27 08:24:32.367482] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:RmsNormTactic
+[2024-03-27 08:24:32.367500] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.367507] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:74680
+[2024-03-27 08:24:32.367550] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.367559] [info] [157891] [bin_tactic.cpp:29] Create tactic RmsNormQuantTactic, launch buffer size 0
+[2024-03-27 08:24:32.367567] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:RmsNormQuantTactic
+[2024-03-27 08:24:32.367585] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.367591] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:75720
+[2024-03-27 08:24:32.367636] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.367655] [info] [157891] [bin_tactic.cpp:29] Create tactic RmsPreNormQuantTactic, launch buffer size 0
+[2024-03-27 08:24:32.367664] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:RmsPreNormQuantTactic
+[2024-03-27 08:24:32.367683] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.367689] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:77272
+[2024-03-27 08:24:32.367733] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.367744] [info] [157891] [bin_tactic.cpp:29] Create tactic ReduceMaxInt32Tactic, launch buffer size 88
+[2024-03-27 08:24:32.367751] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:ReduceMaxInt32Tactic
+[2024-03-27 08:24:32.367757] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 1115968, magic: 1129660997
+[2024-03-27 08:24:32.372389] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.372402] [info] [157891] [bin_tactic.cpp:29] Create tactic ReduceMinInt32Tactic, launch buffer size 88
+[2024-03-27 08:24:32.372410] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:ReduceMinInt32Tactic
+[2024-03-27 08:24:32.372416] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 1114288, magic: 1129660997
+[2024-03-27 08:24:32.377091] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.377103] [info] [157891] [bin_tactic.cpp:29] Create tactic ReverseF16Tactic, launch buffer size 280
+[2024-03-27 08:24:32.377111] [info] [157891] [bin_tactic.cpp:83] SingleKernel RegisterBin start, tacticName:ReverseF16Tactic
+[2024-03-27 08:24:32.377131] [info] [157891] [rtbackend_module.cpp:70] Soc version: Ascend910B3
+[2024-03-27 08:24:32.377138] [info] [157891] [rtbackend_module.cpp:82] RtDev BinaryRegister start, len:22664
+[2024-03-27 08:24:32.377188] [info] [157891] [bin_tactic.cpp:105] SingleKernel RegisterBin finish, handle:0
+[2024-03-27 08:24:32.377199] [info] [157891] [bin_tactic.cpp:29] Create tactic SliceInt8Int64Tactic, launch buffer size 208
+[2024-03-27 08:24:32.377206] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:SliceInt8Int64Tactic
+[2024-03-27 08:24:32.377212] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 2165312, magic: 1094799942
+[2024-03-27 08:24:32.394871] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.394895] [info] [157891] [bin_tactic.cpp:29] Create tactic SliceInt32Int64Tactic, launch buffer size 208
+[2024-03-27 08:24:32.394904] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:SliceInt32Int64Tactic
+[2024-03-27 08:24:32.394913] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 2332000, magic: 1094799942
+[2024-03-27 08:24:32.411978] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.411998] [info] [157891] [bin_tactic.cpp:29] Create tactic SliceF16Int64Tactic, launch buffer size 208
+[2024-03-27 08:24:32.412007] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:SliceF16Int64Tactic
+[2024-03-27 08:24:32.412014] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 2286816, magic: 1094799942
+[2024-03-27 08:24:32.429572] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.429595] [info] [157891] [bin_tactic.cpp:29] Create tactic SoftmaxF16Tactic, launch buffer size 40
+[2024-03-27 08:24:32.429604] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:SoftmaxF16Tactic
+[2024-03-27 08:24:32.429611] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 264512, magic: 1094799942
+[2024-03-27 08:24:32.430195] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.430205] [info] [157891] [bin_tactic.cpp:29] Create tactic SoftmaxF32Tactic, launch buffer size 40
+[2024-03-27 08:24:32.430235] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:SoftmaxF32Tactic
+[2024-03-27 08:24:32.430242] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 245816, magic: 1094799942
+[2024-03-27 08:24:32.430855] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.430866] [info] [157891] [bin_tactic.cpp:29] Create tactic TopKDescF16Tactic, launch buffer size 72
+[2024-03-27 08:24:32.430873] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:TopKDescF16Tactic
+[2024-03-27 08:24:32.430880] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 151920, magic: 1129660997
+[2024-03-27 08:24:32.431247] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.431257] [info] [157891] [bin_tactic.cpp:29] Create tactic SplitF16Output2Tactic, launch buffer size 48
+[2024-03-27 08:24:32.431264] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:SplitF16Output2Tactic
+[2024-03-27 08:24:32.431270] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 24320, magic: 1094799942
+[2024-03-27 08:24:32.431572] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.431581] [info] [157891] [bin_tactic.cpp:29] Create tactic SplitF16Output3Tactic, launch buffer size 48
+[2024-03-27 08:24:32.431588] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:SplitF16Output3Tactic
+[2024-03-27 08:24:32.431594] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 31208, magic: 1094799942
+[2024-03-27 08:24:32.431894] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.431903] [info] [157891] [bin_tactic.cpp:29] Create tactic SplitInt64Output2Tactic, launch buffer size 48
+[2024-03-27 08:24:32.431910] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:SplitInt64Output2Tactic
+[2024-03-27 08:24:32.431916] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 35552, magic: 1094799942
+[2024-03-27 08:24:32.432218] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.432227] [info] [157891] [bin_tactic.cpp:29] Create tactic TransdataNdToNzTactic, launch buffer size 24
+[2024-03-27 08:24:32.432235] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:TransdataNdToNzTactic
+[2024-03-27 08:24:32.432241] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 424360, magic: 1094799942
+[2024-03-27 08:24:32.433693] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.433702] [info] [157891] [bin_tactic.cpp:29] Create tactic TransdataNzToNdTactic, launch buffer size 24
+[2024-03-27 08:24:32.433709] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:TransdataNzToNdTactic
+[2024-03-27 08:24:32.433715] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 596136, magic: 1094799942
+[2024-03-27 08:24:32.436238] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.436248] [info] [157891] [bin_tactic.cpp:29] Create tactic TransdataNdToNzInt8Tactic, launch buffer size 24
+[2024-03-27 08:24:32.436255] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:TransdataNdToNzInt8Tactic
+[2024-03-27 08:24:32.436261] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 443176, magic: 1094799942
+[2024-03-27 08:24:32.437691] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.437700] [info] [157891] [bin_tactic.cpp:29] Create tactic TransposeInt64Tactic, launch buffer size 16384
+[2024-03-27 08:24:32.437707] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:TransposeInt64Tactic
+[2024-03-27 08:24:32.437713] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 182552, magic: 1094799942
+[2024-03-27 08:24:32.438238] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.438248] [info] [157891] [bin_tactic.cpp:29] Create tactic TransposeF16Tactic, launch buffer size 16384
+[2024-03-27 08:24:32.438256] [info] [157891] [bin_tactic.cpp:110] MultiKernel RegisterBin start, tacticName:TransposeF16Tactic
+[2024-03-27 08:24:32.438262] [info] [157891] [rtbackend_module.cpp:172] Rt Register AllKernel start, len: 234392, magic: 1094799942
+[2024-03-27 08:24:32.438756] [info] [157891] [bin_tactic.cpp:118] MultiKernel RegisterBin finish
+[2024-03-27 08:24:32.438904] [info] [157891] [op_schedule.cpp:41] operation count:21
+[2024-03-27 08:24:32.438913] [info] [157891] [op_schedule.cpp:43] add op name:TransposeOperation, id:0
+[2024-03-27 08:24:32.438927] [info] [157891] [op_schedule.cpp:43] add op name:TransdataOperation, id:1
+[2024-03-27 08:24:32.438935] [info] [157891] [op_schedule.cpp:43] add op name:SplitOperation, id:2
+[2024-03-27 08:24:32.438942] [info] [157891] [op_schedule.cpp:43] add op name:SortOperation, id:3
+[2024-03-27 08:24:32.438950] [info] [157891] [op_schedule.cpp:43] add op name:ReverseOperation, id:4
+[2024-03-27 08:24:32.438957] [info] [157891] [op_schedule.cpp:43] add op name:ActivationOperation, id:5
+[2024-03-27 08:24:32.438965] [info] [157891] [op_schedule.cpp:43] add op name:SliceOperation, id:6
+[2024-03-27 08:24:32.438973] [info] [157891] [op_schedule.cpp:43] add op name:AsStridedOperation, id:7
+[2024-03-27 08:24:32.438981] [info] [157891] [op_schedule.cpp:43] add op name:CopyOperation, id:8
+[2024-03-27 08:24:32.438989] [info] [157891] [op_schedule.cpp:43] add op name:SoftmaxOperation, id:9
+[2024-03-27 08:24:32.438996] [info] [157891] [op_schedule.cpp:43] add op name:ElewiseOperation, id:10
+[2024-03-27 08:24:32.439011] [info] [157891] [op_schedule.cpp:43] add op name:ExpandOperation, id:11
+[2024-03-27 08:24:32.439020] [info] [157891] [op_schedule.cpp:43] add op name:ReduceOperation, id:12
+[2024-03-27 08:24:32.439027] [info] [157891] [op_schedule.cpp:43] add op name:GatherOperation, id:13
+[2024-03-27 08:24:32.439035] [info] [157891] [op_schedule.cpp:43] add op name:ConcatOperation, id:14
+[2024-03-27 08:24:32.439042] [info] [157891] [op_schedule.cpp:43] add op name:CumsumOperation, id:15
+[2024-03-27 08:24:32.439049] [info] [157891] [op_schedule.cpp:43] add op name:NormOperation, id:16
+[2024-03-27 08:24:32.439057] [info] [157891] [op_schedule.cpp:43] add op name:MultinomialOperation, id:17
+[2024-03-27 08:24:32.439064] [info] [157891] [op_schedule.cpp:43] add op name:FillOperation, id:18
+[2024-03-27 08:24:32.439072] [info] [157891] [op_schedule.cpp:43] add op name:MatMulOperation, id:19
+[2024-03-27 08:24:32.439082] [info] [157891] [op_schedule.cpp:43] add op name:MixOperation, id:20
+[2024-03-27 08:24:32.439104] [info] [157891] [ops_runner.cpp:646] MatmulOpsRunner_0_0:0  node[0] runinfo:
+opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:0, tilinigId:0, blockDim:0,stream:0, deviceLaunchBuffer:0
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:0
+outtensors[0]: dtype:-1, format:-1, dims:[], dataSize:0, pos:0, data:0
+
+[2024-03-27 08:24:32.439141] [info] [157891] [ops_runner.cpp:654] MatmulOpsRunner_0_0:0  node[0] MatMulOperation infer shape start, runInfo:
+opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:0, tilinigId:0, blockDim:0,stream:0, deviceLaunchBuffer:0
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:0
+outtensors[0]: dtype:-1, format:-1, dims:[], dataSize:0, pos:0, data:0
+
+[2024-03-27 08:24:32.439165] [info] [157891] [ops_runner.cpp:672] MatmulOpsRunner_0_0:0  node[0] MatMulOperation infer shape success, runInfo:
+opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:0, tilinigId:0, blockDim:0,stream:0, deviceLaunchBuffer:0
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:0
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:0, pos:0, data:0
+
+[2024-03-27 08:24:32.439196] [info] [157891] [ops_runner.cpp:698] MatmulOpsRunner_0_0:0  node[0] MatMulOperation outTensors[0] is not internal tensor
+[2024-03-27 08:24:32.439207] [info] [157891] [ops_runner.cpp:710] MatmulOpsRunner_0_0:0  node[0] after mem solve, runinfo:
+opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:0, tilinigId:0, blockDim:0,stream:0, deviceLaunchBuffer:0
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:0
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+
+[2024-03-27 08:24:32.439240] [info] [157891] [ops_runner.cpp:721] MatmulOpsRunner_0_0:0  node[0] best tactic:PpMatMulF16Tactic
+[2024-03-27 08:24:32.439250] [info] [157891] [mem_allocation_solver.cpp:26] MemAllocationSolver::GetSize 0
+[2024-03-27 08:24:32.439259] [info] [157891] [mem_allocation_solver.cpp:32] MemAllocationSolver::GetMallocSize 0
+[2024-03-27 08:24:32.439257] [info] [157891] [ops_runner.cpp:559] MatmulOpsRunner_0_0:0  MemAllocationSolver size:0, real size:0
+[2024-03-27 08:24:32.439271] [info] [157891] [ops_runner.cpp:728] MatmulOpsRunner_0_0:0  calc tiling buffer size start
+[2024-03-27 08:24:32.439278] [info] [157891] [ops_runner.cpp:729] MatmulOpsRunner_0_0:0  inTensor size:2, outTensor size:1
+[2024-03-27 08:24:32.439286] [info] [157891] [ops_runner.cpp:744] MatmulOpsRunner_0_0:0  node[0] PpMatMulF16Tactic orgTilingSize:256, tilingSize:256
+[2024-03-27 08:24:32.439295] [info] [157891] [ops_runner.cpp:749] MatmulOpsRunner_0_0:0  calc tiling buffer size end, totalTilingSize:256
+[2024-03-27 08:24:32.439303] [info] [157891] [graph_runner.cpp:372] GraphOperationRunner_0:0  node[0] setup success
+[2024-03-27 08:24:32.439310] [info] [157891] [graph_runner.cpp:365] GraphOperationRunner_0:0  node[1] setup start
+[2024-03-27 08:24:32.439318] [info] [157891] [ops_runner.cpp:136] MatmulOpsRunner_0_1:0  setup start, runnerVariantPack:
+ tilingBufferSize:0, workspaceBufferSize:0, intermediateBufferSize:0
+inTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+inTensors[1]: dtype: 1, format: 2, shape:[4096, 4096], dataSize:33554432
+outTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+
+[2024-03-27 08:24:32.439342] [info] [157891] [matmul_ops_runner.cpp:36] MatmulOpsRunner_0_1:0 MatmulOpsRunner, OpsRunnerVariantPack:
+[2024-03-27 08:24:32.439371] [info] [157891] [matmul_ops_runner.cpp:57] MatmulOpsRunner_0_1:0 MatmulOpsRunnerMatmulOpsRunner SetupKernelGraph910b
+[2024-03-27 08:24:32.439445] [info] [157891] [ops_runner.cpp:178] MatmulOpsRunner_0_1:0  Setup start, kernel graph:
+inTensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192
+inTensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432
+outTensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192
+node[0] inTensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192
+node[0] inTensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432
+node[0] outTensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192
+
+[2024-03-27 08:24:32.439471] [info] [157891] [ops_runner.cpp:549] MatmulOpsRunner_0_1:0  runnerVariantPack inTensor size:2, outTensor size:1
+[2024-03-27 08:24:32.439481] [info] [157891] [ops_runner.cpp:646] MatmulOpsRunner_0_1:0  node[0] runinfo:
+opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:0, tilinigId:0, blockDim:0,stream:0, deviceLaunchBuffer:0
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:0
+outtensors[0]: dtype:-1, format:-1, dims:[], dataSize:0, pos:0, data:0
+
+[2024-03-27 08:24:32.439508] [info] [157891] [ops_runner.cpp:654] MatmulOpsRunner_0_1:0  node[0] MatMulOperation infer shape start, runInfo:
+opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:0, tilinigId:0, blockDim:0,stream:0, deviceLaunchBuffer:0
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:0
+outtensors[0]: dtype:-1, format:-1, dims:[], dataSize:0, pos:0, data:0
+
+[2024-03-27 08:24:32.439526] [info] [157891] [ops_runner.cpp:672] MatmulOpsRunner_0_1:0  node[0] MatMulOperation infer shape success, runInfo:
+opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:0, tilinigId:0, blockDim:0,stream:0, deviceLaunchBuffer:0
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:0
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:0, pos:0, data:0
+
+[2024-03-27 08:24:32.439542] [info] [157891] [ops_runner.cpp:698] MatmulOpsRunner_0_1:0  node[0] MatMulOperation outTensors[0] is not internal tensor
+[2024-03-27 08:24:32.439550] [info] [157891] [ops_runner.cpp:710] MatmulOpsRunner_0_1:0  node[0] after mem solve, runinfo:
+opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:0, tilinigId:0, blockDim:0,stream:0, deviceLaunchBuffer:0
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:0
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+
+[2024-03-27 08:24:32.439570] [info] [157891] [ops_runner.cpp:721] MatmulOpsRunner_0_1:0  node[0] best tactic:PpMatMulF16Tactic
+[2024-03-27 08:24:32.439578] [info] [157891] [mem_allocation_solver.cpp:26] MemAllocationSolver::GetSize 0
+[2024-03-27 08:24:32.439587] [info] [157891] [mem_allocation_solver.cpp:32] MemAllocationSolver::GetMallocSize 0
+[2024-03-27 08:24:32.439584] [info] [157891] [ops_runner.cpp:559] MatmulOpsRunner_0_1:0  MemAllocationSolver size:0, real size:0
+[2024-03-27 08:24:32.439598] [info] [157891] [ops_runner.cpp:728] MatmulOpsRunner_0_1:0  calc tiling buffer size start
+[2024-03-27 08:24:32.439605] [info] [157891] [ops_runner.cpp:729] MatmulOpsRunner_0_1:0  inTensor size:2, outTensor size:1
+[2024-03-27 08:24:32.439611] [info] [157891] [ops_runner.cpp:744] MatmulOpsRunner_0_1:0  node[0] PpMatMulF16Tactic orgTilingSize:256, tilingSize:256
+[2024-03-27 08:24:32.439619] [info] [157891] [ops_runner.cpp:749] MatmulOpsRunner_0_1:0  calc tiling buffer size end, totalTilingSize:256
+[2024-03-27 08:24:32.439625] [info] [157891] [graph_runner.cpp:372] GraphOperationRunner_0:0  node[1] setup success
+[2024-03-27 08:24:32.439632] [info] [157891] [graph_runner.cpp:365] GraphOperationRunner_0:0  node[2] setup start
+[2024-03-27 08:24:32.439640] [info] [157891] [ops_runner.cpp:136] ElewiseOpsRunner_0_2:0  setup start, runnerVariantPack:
+ tilingBufferSize:0, workspaceBufferSize:0, intermediateBufferSize:0
+inTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+inTensors[1]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+outTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+
+[2024-03-27 08:24:32.439656] [info] [157891] [ops_runner.cpp:783] ElewiseOpsRunner_0_2:0 ElewiseOpsRunner, OpsRunnerVariantPack: 
+[2024-03-27 08:24:32.439782] [info] [157891] [ops_runner.cpp:178] ElewiseOpsRunner_0_2:0  Setup start, kernel graph:
+inTensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192
+inTensors[1]: dtype:1, format:2, dims:[1, 4096], dataSize:8192
+outTensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192
+node[0] inTensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192
+node[0] inTensors[1]: dtype:1, format:2, dims:[1, 4096], dataSize:8192
+node[0] outTensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192
+
+[2024-03-27 08:24:32.439813] [info] [157891] [ops_runner.cpp:549] ElewiseOpsRunner_0_2:0  runnerVariantPack inTensor size:2, outTensor size:1
+[2024-03-27 08:24:32.439824] [info] [157891] [ops_runner.cpp:646] ElewiseOpsRunner_0_2:0  node[0] runinfo:
+opdesc:opdesc.opName:ElewiseOperation opdesc.specificParam: elewiseType:8, varAttr:0, inputScale:1, inputOffset:0, roundMode:0, outTensorType:-1, hwsync:0, launchBufferSize:0, tilinigId:0, blockDim:0,stream:0, deviceLaunchBuffer:0
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+intensors[1]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+outtensors[0]: dtype:-1, format:-1, dims:[], dataSize:0, pos:0, data:0
+
+[2024-03-27 08:24:32.439852] [info] [157891] [ops_runner.cpp:654] ElewiseOpsRunner_0_2:0  node[0] ElewiseOperation infer shape start, runInfo:
+opdesc:opdesc.opName:ElewiseOperation opdesc.specificParam: elewiseType:8, varAttr:0, inputScale:1, inputOffset:0, roundMode:0, outTensorType:-1, hwsync:0, launchBufferSize:0, tilinigId:0, blockDim:0,stream:0, deviceLaunchBuffer:0
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+intensors[1]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+outtensors[0]: dtype:-1, format:-1, dims:[], dataSize:0, pos:0, data:0
+
+[2024-03-27 08:24:32.439871] [info] [157891] [elewise_operation.cpp:216] largestSize = 2
+[2024-03-27 08:24:32.439879] [info] [157891] [elewise_operation.cpp:226] broadcast idx = 0 dim0 = 4096 dim1 = 4096
+[2024-03-27 08:24:32.439885] [info] [157891] [elewise_operation.cpp:226] broadcast idx = 1 dim0 = 1 dim1 = 1
+[2024-03-27 08:24:32.439891] [info] [157891] [ops_runner.cpp:672] ElewiseOpsRunner_0_2:0  node[0] ElewiseOperation infer shape success, runInfo:
+opdesc:opdesc.opName:ElewiseOperation opdesc.specificParam: elewiseType:8, varAttr:0, inputScale:1, inputOffset:0, roundMode:0, outTensorType:-1, hwsync:0, launchBufferSize:0, tilinigId:0, blockDim:0,stream:0, deviceLaunchBuffer:0
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+intensors[1]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:0, pos:0, data:0
+
+[2024-03-27 08:24:32.439908] [info] [157891] [ops_runner.cpp:698] ElewiseOpsRunner_0_2:0  node[0] ElewiseOperation outTensors[0] is not internal tensor
+[2024-03-27 08:24:32.439916] [info] [157891] [ops_runner.cpp:710] ElewiseOpsRunner_0_2:0  node[0] after mem solve, runinfo:
+opdesc:opdesc.opName:ElewiseOperation opdesc.specificParam: elewiseType:8, varAttr:0, inputScale:1, inputOffset:0, roundMode:0, outTensorType:-1, hwsync:0, launchBufferSize:0, tilinigId:0, blockDim:0,stream:0, deviceLaunchBuffer:0
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+intensors[1]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+
+[2024-03-27 08:24:32.439937] [info] [157891] [elewise_operation.cpp:216] largestSize = 2
+[2024-03-27 08:24:32.439944] [info] [157891] [elewise_operation.cpp:226] broadcast idx = 0 dim0 = 4096 dim1 = 4096
+[2024-03-27 08:24:32.439951] [info] [157891] [elewise_operation.cpp:226] broadcast idx = 1 dim0 = 1 dim1 = 1
+[2024-03-27 08:24:32.439960] [info] [157891] [ops_runner.cpp:721] ElewiseOpsRunner_0_2:0  node[0] best tactic:AddF16Tactic
+[2024-03-27 08:24:32.439967] [info] [157891] [mem_allocation_solver.cpp:26] MemAllocationSolver::GetSize 0
+[2024-03-27 08:24:32.439976] [info] [157891] [mem_allocation_solver.cpp:32] MemAllocationSolver::GetMallocSize 0
+[2024-03-27 08:24:32.439974] [info] [157891] [ops_runner.cpp:559] ElewiseOpsRunner_0_2:0  MemAllocationSolver size:0, real size:0
+[2024-03-27 08:24:32.439994] [info] [157891] [ops_runner.cpp:728] ElewiseOpsRunner_0_2:0  calc tiling buffer size start
+[2024-03-27 08:24:32.440001] [info] [157891] [ops_runner.cpp:729] ElewiseOpsRunner_0_2:0  inTensor size:2, outTensor size:1
+[2024-03-27 08:24:32.440008] [info] [157891] [ops_runner.cpp:744] ElewiseOpsRunner_0_2:0  node[0] AddF16Tactic orgTilingSize:144, tilingSize:160
+[2024-03-27 08:24:32.440015] [info] [157891] [ops_runner.cpp:749] ElewiseOpsRunner_0_2:0  calc tiling buffer size end, totalTilingSize:160
+[2024-03-27 08:24:32.440022] [info] [157891] [graph_runner.cpp:372] GraphOperationRunner_0:0  node[2] setup success
+[2024-03-27 08:24:32.440029] [info] [157891] [graph_runner.cpp:374] GraphOperationRunner_0:0  setup all node success
+[2024-03-27 08:24:32.440037] [info] [157891] [graph_runner.cpp:385] GraphOperationRunner_0:0  node[0] tiling buffer size:256
+[2024-03-27 08:24:32.440044] [info] [157891] [graph_runner.cpp:385] GraphOperationRunner_0:0  node[1] tiling buffer size:256
+[2024-03-27 08:24:32.440051] [info] [157891] [graph_runner.cpp:385] GraphOperationRunner_0:0  node[2] tiling buffer size:160
+[2024-03-27 08:24:32.440057] [info] [157891] [graph_runner.cpp:389] GraphOperationRunner_0:0  total node tiling buffer size:672
+[2024-03-27 08:24:32.440064] [info] [157891] [graph_runner.cpp:401] GraphOperationRunner_0:0  node[0] intermediate buffer size:0, max:0
+[2024-03-27 08:24:32.440072] [info] [157891] [graph_runner.cpp:401] GraphOperationRunner_0:0  node[1] intermediate buffer size:0, max:0
+[2024-03-27 08:24:32.440078] [info] [157891] [graph_runner.cpp:401] GraphOperationRunner_0:0  node[2] intermediate buffer size:0, max:0
+[2024-03-27 08:24:32.440087] [info] [157891] [ops_runner.cpp:213] MatmulOpsRunner_0_0:0  FillHostTilingBufferImpl start,  tilingBufferSize:256, totalTilingSize:256
+[2024-03-27 08:24:32.440100] [info] [157891] [ops_runner.cpp:245] MatmulOpsRunner_0_0:0  node[0] InitHostLaunchBuffer start
+[2024-03-27 08:24:32.440133] [info] [157891] [platform_info.cpp:44] PlatformInfo get soc version: Ascend910B3
+[2024-03-27 08:24:32.474522] [info] [157891] [platform_infos_def.cpp:80] Set PlatFormInfos::core_num_ to ai_core_cnt: 20
+[2024-03-27 08:24:32.474554] [info] [157891] [platform_infos_def.cpp:95] Get PlatFormInfos::core_num_: 20
+[2024-03-27 08:24:32.474564] [info] [157891] [platform_info.cpp:82] Platform get core num 20, type 1 
+[2024-03-27 08:24:32.474578] [info] [157891] [platform_info.cpp:90] PlatformInfo get l2 size 201326592
+[2024-03-27 08:24:32.474586] [info] [157891] [platform_info.cpp:98] PlatformInfo get l1 size 524288
+[2024-03-27 08:24:32.474593] [info] [157891] [platform_info.cpp:106] PlatformInfo get l0a size 65536
+[2024-03-27 08:24:32.474601] [info] [157891] [platform_info.cpp:114] PlatformInfo get l0b size 65536
+[2024-03-27 08:24:32.474608] [info] [157891] [platform_info.cpp:122] PlatformInfo get l0c size 131072
+[2024-03-27 08:24:32.474619] [info] [157891] [common_tiling.h:108] hwInfor.l0cSize = 131072
+[2024-03-27 08:24:32.474627] [info] [157891] [pp_matmul_tiling.cpp:91] k0Max = 481
+[2024-03-27 08:24:32.474635] [info] [157891] [pp_matmul_tiling.cpp:180] launchBufferSize = 256
+[2024-03-27 08:24:32.474641] [info] [157891] [pp_matmul_tiling.cpp:181] block dim = 16
+[2024-03-27 08:24:32.474648] [info] [157891] [pp_matmul_tiling.cpp:182] batchsize, m, k, n = 1 1 4096 4096
+[2024-03-27 08:24:32.474654] [info] [157891] [pp_matmul_tiling.cpp:184] m0, k0, n0 = 16 256 256
+[2024-03-27 08:24:32.474660] [info] [157891] [pp_matmul_tiling.cpp:186] mLoop, kLoop, nLoop = 1 16 16
+[2024-03-27 08:24:32.474667] [info] [157891] [pp_matmul_tiling.cpp:188] head, tail = 0 16
+[2024-03-27 08:24:32.474673] [info] [157891] [pp_matmul_tiling.cpp:189] tiling key = 0
+[2024-03-27 08:24:32.474678] [info] [157891] [pp_matmul_tiling.cpp:190] blockDim = 16
+[2024-03-27 08:24:32.474687] [info] [157891] [ops_runner.cpp:251] MatmulOpsRunner_0_0:0  node[0] InitHostLaunchBuffer end, time:34579
+[2024-03-27 08:24:32.474710] [info] [157891] [ops_runner.cpp:972] MatmulOpsRunner_0_0:0  node[0] InitHostLaunchBuffer end, runinfo
+:opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:0, tilinigId:0, blockDim:16,stream:0, deviceLaunchBuffer:0
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:0
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+
+[2024-03-27 08:24:32.474801] [info] [157891] [ops_runner.cpp:972] MatmulOpsRunner_0_0:0  node[0] InitHostLaunchBuffer end, runinfo
+:opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:0, tilinigId:0, blockDim:16,stream:0, deviceLaunchBuffer:0
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:0
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+
+[2024-03-27 08:24:32.474823] [info] [157891] [ops_runner.cpp:213] MatmulOpsRunner_0_1:0  FillHostTilingBufferImpl start,  tilingBufferSize:256, totalTilingSize:256
+[2024-03-27 08:24:32.474838] [info] [157891] [ops_runner.cpp:949] MatmulOpsRunner_0_1:0  node[0] kernel cache get last tiling
+[2024-03-27 08:24:32.474846] [info] [157891] [ops_runner.cpp:213] ElewiseOpsRunner_0_2:0  FillHostTilingBufferImpl start,  tilingBufferSize:160, totalTilingSize:160
+[2024-03-27 08:24:32.474855] [info] [157891] [ops_runner.cpp:245] ElewiseOpsRunner_0_2:0  node[0] InitHostLaunchBuffer start
+[2024-03-27 08:24:32.474901] [info] [157891] [tbe_tiling_runner.cpp:189] Tiling runner get soc version: Ascend910B3
+[2024-03-27 08:24:32.474912] [info] [157891] [platform_infos_def.cpp:80] Set PlatFormInfos::core_num_ to vector_core_cnt: 40
+[2024-03-27 08:24:32.474929] [info] [157891] [tbe_tiling_runner.cpp:141] Tactic AddF16Tactic is first tiling parse
+[2024-03-27 08:24:32.474941] [info] [157891] [auto_tiling_rt2.cc:247] [AutoTilingParser] OpName:[DefaultImpl] "Entering AutoTiling parser." 
+[2024-03-27 08:24:32.475792] [info] [157891] [platform_infos_def.cpp:95] Get PlatFormInfos::core_num_: 40
+[2024-03-27 08:24:32.475805] [info] [157891] [auto_tiling_rt2.cc:193] [ParseAutoTilingRun] OpName:[DefaultImpl] "Core num get from GE is 40." 
+[2024-03-27 08:24:32.475994] [info] [157891] [auto_tiling_rt2.cc:226] [AutoTiling] OpName:[DefaultImpl] "Entering AutoTiling." 
+[2024-03-27 08:24:32.476042] [info] [157891] [elewise_tiling.cpp:79] AddF16Tactic TilingId: 210000000 BlockDim: 2
+[2024-03-27 08:24:32.476053] [info] [157891] [ops_runner.cpp:251] ElewiseOpsRunner_0_2:0  node[0] InitHostLaunchBuffer end, time:1191
+[2024-03-27 08:24:32.476078] [info] [157891] [ops_runner.cpp:972] ElewiseOpsRunner_0_2:0  node[0] InitHostLaunchBuffer end, runinfo
+:opdesc:opdesc.opName:ElewiseOperation opdesc.specificParam: elewiseType:8, varAttr:0, inputScale:1, inputOffset:0, roundMode:0, outTensorType:-1, hwsync:0, launchBufferSize:0, tilinigId:210000000, blockDim:2,stream:0, deviceLaunchBuffer:0
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+intensors[1]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+
+[2024-03-27 08:24:32.476109] [info] [157891] [ops_runner.cpp:972] ElewiseOpsRunner_0_2:0  node[0] InitHostLaunchBuffer end, runinfo
+:opdesc:opdesc.opName:ElewiseOperation opdesc.specificParam: elewiseType:8, varAttr:0, inputScale:1, inputOffset:0, roundMode:0, outTensorType:-1, hwsync:0, launchBufferSize:0, tilinigId:210000000, blockDim:2,stream:0, deviceLaunchBuffer:0
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+intensors[1]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:0
+
+[2024-03-27 08:24:32.476127] [info] [157891] [graph_runner.cpp:179] GraphOperationRunner_0:0 fill all node host tiling buffer, tilingBufferSize:1024
+[2024-03-27 08:24:32.476151] [info] [157891] [ops_runner.cpp:271] MatmulOpsRunner_0_0:0  node[0] PpMatMulF16Tactic workspaces.size:0
+[2024-03-27 08:24:32.476160] [info] [157891] [ops_runner.cpp:283] MatmulOpsRunner_0_0:0  node[0] PpMatMulF16Tactic kernelWorkspaceSize:0, maxKernelWorkspaceSize:0
+[2024-03-27 08:24:32.476168] [info] [157891] [graph_runner.cpp:188] GraphOperationRunner_0:0 node[0] workspace buffer size:0, max:0
+[2024-03-27 08:24:32.476176] [info] [157891] [ops_runner.cpp:271] MatmulOpsRunner_0_1:0  node[0] PpMatMulF16Tactic workspaces.size:0
+[2024-03-27 08:24:32.476183] [info] [157891] [ops_runner.cpp:283] MatmulOpsRunner_0_1:0  node[0] PpMatMulF16Tactic kernelWorkspaceSize:0, maxKernelWorkspaceSize:0
+[2024-03-27 08:24:32.476190] [info] [157891] [graph_runner.cpp:188] GraphOperationRunner_0:0 node[1] workspace buffer size:0, max:0
+[2024-03-27 08:24:32.476197] [info] [157891] [ops_runner.cpp:271] ElewiseOpsRunner_0_2:0  node[0] AddF16Tactic workspaces.size:0
+[2024-03-27 08:24:32.476204] [info] [157891] [ops_runner.cpp:283] ElewiseOpsRunner_0_2:0  node[0] AddF16Tactic kernelWorkspaceSize:0, maxKernelWorkspaceSize:0
+[2024-03-27 08:24:32.476211] [info] [157891] [graph_runner.cpp:188] GraphOperationRunner_0:0 node[2] workspace buffer size:0, max:0
+[2024-03-27 08:24:32.476219] [info] [157891] [graph_runner.cpp:191] GraphOperationRunner_0:0  max workspace buffer size:0
+[2024-03-27 08:24:32.476227] [info] [157891] [operation_base.cpp:287] GraphOperation_0 setup success, workspaceSize:16384, runner.tilingBufferSize:1024, runner.workspaceBufferSize:0, runner.intermediateBufferSize:16384
+[2024-03-27 08:24:32.476235] [fatal] [157891] [operation_base.cpp:334] GraphOperation_0 setup statistic:totalTime:385045, runnerSetupTime:348535, runnerFillHostTilingTime:36139, setupTotalCount:3, setupCacheHitCount:0, setupCacheMissCount:0, opsInitLuanchBufferTime:35770, tilingCacheHitCount:1, tilingCacheMissCount:2, tilingLocalCacheHitCount:0, tilingGlobalCacheHitCount:1, kernelCacheGetTilingTime:8, kernelCacheAddTilingTime:50, kernelCacheCompareRunInfoTime:6, kernelCacheGetRunInfoTime:1
+graph work space size: 16384
+[2024-03-27 08:24:32.476734] [info] [157891] [operation_base.cpp:450] GraphOperation_0 execute start, workspaceSize:16384, variantPack:inTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+inTensors[1]: dtype: 1, format: 2, shape:[4096, 4096], dataSize:33554432
+inTensors[2]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+inTensors[3]: dtype: 1, format: 2, shape:[4096, 4096], dataSize:33554432
+outTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+
+[2024-03-27 08:24:32.476769] [info] [157891] [operation_base.cpp:541] GraphOperation_0 copy host tiling to device start, totalTilingBufferSize:1024
+[2024-03-27 08:24:32.477005] [info] [157891] [operation_base.cpp:552] GraphOperation_0 copy host tiling to device success
+[2024-03-27 08:24:32.477016] [info] [157891] [operation_base.cpp:467] GraphOperation_0 execute GraphOperationRunner_0x3af5cf50 start
+[2024-03-27 08:24:32.477025] [info] [157891] [graph_runner.cpp:206] GraphOperationRunner_0:0  Execute start, runnerGraph_.nodes:3
+[2024-03-27 08:24:32.477035] [info] [157891] [graph_runner.cpp:408] GraphOperationRunner_0:0  update runner variant pack's buffer start
+[2024-03-27 08:24:32.477043] [info] [157891] [graph_runner.cpp:433] GraphOperationRunner_0:0  update runner variant pack's buffer end
+[2024-03-27 08:24:32.477050] [info] [157891] [graph_runner.cpp:450] GraphOperationRunner_0:0  update runner variant pack's tensor data start
+[2024-03-27 08:24:32.477058] [info] [157891] [graph_runner.cpp:455] GraphOperationRunner_0:0  update tensor.data node[0]
+[2024-03-27 08:24:32.477065] [info] [157891] [graph_runner.cpp:464] GraphOperationRunner_0:0  update node[0] intensor[0] is not internal. dataSize:8192
+[2024-03-27 08:24:32.477074] [info] [157891] [graph_runner.cpp:464] GraphOperationRunner_0:0  update node[0] intensor[1] is not internal. dataSize:33554432
+[2024-03-27 08:24:32.477082] [info] [157891] [graph_runner.cpp:472] GraphOperationRunner_0:0  update node[0] outtensor[0] is internal. dataSize:8192
+[2024-03-27 08:24:32.477091] [info] [157891] [graph_runner.cpp:455] GraphOperationRunner_0:0  update tensor.data node[1]
+[2024-03-27 08:24:32.477098] [info] [157891] [graph_runner.cpp:464] GraphOperationRunner_0:0  update node[1] intensor[0] is not internal. dataSize:8192
+[2024-03-27 08:24:32.477106] [info] [157891] [graph_runner.cpp:464] GraphOperationRunner_0:0  update node[1] intensor[1] is not internal. dataSize:33554432
+[2024-03-27 08:24:32.477113] [info] [157891] [graph_runner.cpp:472] GraphOperationRunner_0:0  update node[1] outtensor[0] is internal. dataSize:8192
+[2024-03-27 08:24:32.477121] [info] [157891] [graph_runner.cpp:455] GraphOperationRunner_0:0  update tensor.data node[2]
+[2024-03-27 08:24:32.477128] [info] [157891] [graph_runner.cpp:460] GraphOperationRunner_0:0  update node[2] intensor[0] is internal. dataSize:8192
+[2024-03-27 08:24:32.477135] [info] [157891] [graph_runner.cpp:460] GraphOperationRunner_0:0  update node[2] intensor[1] is internal. dataSize:8192
+[2024-03-27 08:24:32.477143] [info] [157891] [graph_runner.cpp:477] GraphOperationRunner_0:0  update node[2] outtensor[0] is not internal. dataSize:8192
+[2024-03-27 08:24:32.477151] [info] [157891] [graph_runner.cpp:482] GraphOperationRunner_0:0  update runner variant pack's tensor data end
+[2024-03-27 08:24:32.477158] [info] [157891] [graph_runner.cpp:489] GraphOperationRunner_0:0  node[0] execute start, runner:MatmulOpsRunner, variantPack:
+ tilingBufferSize:256, workspaceBufferSize:0, intermediateBufferSize:0
+inTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+inTensors[1]: dtype: 1, format: 2, shape:[4096, 4096], dataSize:33554432
+outTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+
+[2024-03-27 08:24:32.477175] [info] [157891] [ops_runner.cpp:306] MatmulOpsRunner_0_0:0  execute start, totalTilingSize:256, workspaceSize:0, intermediateSize:0
+[2024-03-27 08:24:32.477185] [info] [157891] [ops_runner.cpp:347] MatmulOpsRunner_0_0:0  update node[0] inTensors[0] is not intermeidate. dataSize:8192
+[2024-03-27 08:24:32.477194] [info] [157891] [ops_runner.cpp:347] MatmulOpsRunner_0_0:0  update node[0] inTensors[1] is not intermeidate. dataSize:33554432
+[2024-03-27 08:24:32.477228] [info] [157891] [ops_runner.cpp:359] MatmulOpsRunner_0_0:0  update node[0] outTensors[0] is not intermeidate. dataSize:8192
+[2024-03-27 08:24:32.477239] [info] [157891] [ops_runner.cpp:368] MatmulOpsRunner_0_0:0  update kernel runinfo launch buffer
+[2024-03-27 08:24:32.477246] [info] [157891] [ops_runner.cpp:383] MatmulOpsRunner_0_0:0  update kernel runinfo workspace
+[2024-03-27 08:24:32.477254] [info] [157891] [ops_runner.cpp:490] MatmulOpsRunner_0_0:0  start run all kernel, kernel count:1
+[2024-03-27 08:24:32.477262] [info] [157891] [ops_runner.cpp:516] MatmulOpsRunner_0_0:0  node[0] PpMatMulF16Tactic run start, runinfo:
+opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:256, tilinigId:0, blockDim:16,stream:1, deviceLaunchBuffer:1
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:1
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+
+[2024-03-27 08:24:32.477286] [info] [157891] [bin_tactic.cpp:205] BinTactic FunctionPrepareInOut input 1
+[2024-03-27 08:24:32.477292] [info] [157891] [bin_tactic.cpp:205] BinTactic FunctionPrepareInOut input 1
+[2024-03-27 08:24:32.477299] [info] [157891] [bin_tactic.cpp:238] BinTactic FunctionRun output 1
+[2024-03-27 08:24:32.477306] [info] [157891] [bin_tactic.cpp:170] BinTactic FunctionRun tiling 1
+[2024-03-27 08:24:32.477312] [info] [157891] [bin_tactic.cpp:172] BinTactic FunctionRun arg size 4
+[2024-03-27 08:24:32.477318] [info] [157891] [bin_tactic.cpp:173] BinTactic FunctionRun tilingId 0, blockDim 16
+[2024-03-27 08:24:32.477325] [info] [157891] [bin_tactic.cpp:187] launch function with name
+[2024-03-27 08:24:32.477718] [info] [157891] [ops_runner.cpp:522] MatmulOpsRunner_0_0:0  node[0] PpMatMulF16Tactic run end, runInfo
+:opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:256, tilinigId:0, blockDim:16,stream:1, deviceLaunchBuffer:1
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:1
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+
+[2024-03-27 08:24:32.477755] [info] [157891] [ops_runner.cpp:507] MatmulOpsRunner_0_0:0  finish run all kernel
+[2024-03-27 08:24:32.477765] [info] [157891] [ops_runner.cpp:317] MatmulOpsRunner_0_0:0  execute end
+[2024-03-27 08:24:32.477773] [info] [157891] [graph_runner.cpp:489] GraphOperationRunner_0:0  node[1] execute start, runner:MatmulOpsRunner, variantPack:
+ tilingBufferSize:256, workspaceBufferSize:0, intermediateBufferSize:0
+inTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+inTensors[1]: dtype: 1, format: 2, shape:[4096, 4096], dataSize:33554432
+outTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+
+[2024-03-27 08:24:32.477789] [info] [157891] [ops_runner.cpp:306] MatmulOpsRunner_0_1:0  execute start, totalTilingSize:256, workspaceSize:0, intermediateSize:0
+[2024-03-27 08:24:32.477798] [info] [157891] [ops_runner.cpp:347] MatmulOpsRunner_0_1:0  update node[0] inTensors[0] is not intermeidate. dataSize:8192
+[2024-03-27 08:24:32.477807] [info] [157891] [ops_runner.cpp:347] MatmulOpsRunner_0_1:0  update node[0] inTensors[1] is not intermeidate. dataSize:33554432
+[2024-03-27 08:24:32.477815] [info] [157891] [ops_runner.cpp:359] MatmulOpsRunner_0_1:0  update node[0] outTensors[0] is not intermeidate. dataSize:8192
+[2024-03-27 08:24:32.477823] [info] [157891] [ops_runner.cpp:368] MatmulOpsRunner_0_1:0  update kernel runinfo launch buffer
+[2024-03-27 08:24:32.477830] [info] [157891] [ops_runner.cpp:383] MatmulOpsRunner_0_1:0  update kernel runinfo workspace
+[2024-03-27 08:24:32.477837] [info] [157891] [ops_runner.cpp:490] MatmulOpsRunner_0_1:0  start run all kernel, kernel count:1
+[2024-03-27 08:24:32.477861] [info] [157891] [ops_runner.cpp:516] MatmulOpsRunner_0_1:0  node[0] PpMatMulF16Tactic run start, runinfo:
+opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:256, tilinigId:0, blockDim:16,stream:1, deviceLaunchBuffer:1
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:1
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+
+[2024-03-27 08:24:32.477882] [info] [157891] [bin_tactic.cpp:205] BinTactic FunctionPrepareInOut input 1
+[2024-03-27 08:24:32.477889] [info] [157891] [bin_tactic.cpp:205] BinTactic FunctionPrepareInOut input 1
+[2024-03-27 08:24:32.477895] [info] [157891] [bin_tactic.cpp:238] BinTactic FunctionRun output 1
+[2024-03-27 08:24:32.477902] [info] [157891] [bin_tactic.cpp:170] BinTactic FunctionRun tiling 1
+[2024-03-27 08:24:32.477908] [info] [157891] [bin_tactic.cpp:172] BinTactic FunctionRun arg size 4
+[2024-03-27 08:24:32.477914] [info] [157891] [bin_tactic.cpp:173] BinTactic FunctionRun tilingId 0, blockDim 16
+[2024-03-27 08:24:32.477920] [info] [157891] [bin_tactic.cpp:187] launch function with name
+[2024-03-27 08:24:32.478048] [info] [157891] [ops_runner.cpp:522] MatmulOpsRunner_0_1:0  node[0] PpMatMulF16Tactic run end, runInfo
+:opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:256, tilinigId:0, blockDim:16,stream:1, deviceLaunchBuffer:1
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:1
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+
+[2024-03-27 08:24:32.478067] [info] [157891] [ops_runner.cpp:507] MatmulOpsRunner_0_1:0  finish run all kernel
+[2024-03-27 08:24:32.478075] [info] [157891] [ops_runner.cpp:317] MatmulOpsRunner_0_1:0  execute end
+[2024-03-27 08:24:32.478082] [info] [157891] [graph_runner.cpp:489] GraphOperationRunner_0:0  node[2] execute start, runner:ElewiseOpsRunner, variantPack:
+ tilingBufferSize:160, workspaceBufferSize:0, intermediateBufferSize:0
+inTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+inTensors[1]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+outTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+
+[2024-03-27 08:24:32.478097] [info] [157891] [ops_runner.cpp:306] ElewiseOpsRunner_0_2:0  execute start, totalTilingSize:160, workspaceSize:0, intermediateSize:0
+[2024-03-27 08:24:32.478104] [info] [157891] [ops_runner.cpp:347] ElewiseOpsRunner_0_2:0  update node[0] inTensors[0] is not intermeidate. dataSize:8192
+[2024-03-27 08:24:32.478112] [info] [157891] [ops_runner.cpp:347] ElewiseOpsRunner_0_2:0  update node[0] inTensors[1] is not intermeidate. dataSize:8192
+[2024-03-27 08:24:32.478120] [info] [157891] [ops_runner.cpp:359] ElewiseOpsRunner_0_2:0  update node[0] outTensors[0] is not intermeidate. dataSize:8192
+[2024-03-27 08:24:32.478128] [info] [157891] [ops_runner.cpp:368] ElewiseOpsRunner_0_2:0  update kernel runinfo launch buffer
+[2024-03-27 08:24:32.478135] [info] [157891] [ops_runner.cpp:383] ElewiseOpsRunner_0_2:0  update kernel runinfo workspace
+[2024-03-27 08:24:32.478142] [info] [157891] [ops_runner.cpp:490] ElewiseOpsRunner_0_2:0  start run all kernel, kernel count:1
+[2024-03-27 08:24:32.478149] [info] [157891] [ops_runner.cpp:516] ElewiseOpsRunner_0_2:0  node[0] AddF16Tactic run start, runinfo:
+opdesc:opdesc.opName:ElewiseOperation opdesc.specificParam: elewiseType:8, varAttr:0, inputScale:1, inputOffset:0, roundMode:0, outTensorType:-1, hwsync:0, launchBufferSize:160, tilinigId:210000000, blockDim:2,stream:1, deviceLaunchBuffer:1
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+intensors[1]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+
+[2024-03-27 08:24:32.478181] [info] [157891] [bin_tactic.cpp:205] BinTactic FunctionPrepareInOut input 1
+[2024-03-27 08:24:32.478188] [info] [157891] [bin_tactic.cpp:205] BinTactic FunctionPrepareInOut input 1
+[2024-03-27 08:24:32.478195] [info] [157891] [bin_tactic.cpp:238] BinTactic FunctionRun output 1
+[2024-03-27 08:24:32.478201] [info] [157891] [bin_tactic.cpp:170] BinTactic FunctionRun tiling 1
+[2024-03-27 08:24:32.478207] [info] [157891] [bin_tactic.cpp:172] BinTactic FunctionRun arg size 4
+[2024-03-27 08:24:32.478213] [info] [157891] [bin_tactic.cpp:173] BinTactic FunctionRun tilingId 210000000, blockDim 2
+[2024-03-27 08:24:32.478219] [info] [157891] [bin_tactic.cpp:182] launch function with handle
+[2024-03-27 08:24:32.478446] [info] [157891] [ops_runner.cpp:522] ElewiseOpsRunner_0_2:0  node[0] AddF16Tactic run end, runInfo
+:opdesc:opdesc.opName:ElewiseOperation opdesc.specificParam: elewiseType:8, varAttr:0, inputScale:1, inputOffset:0, roundMode:0, outTensorType:-1, hwsync:0, launchBufferSize:160, tilinigId:210000000, blockDim:2,stream:1, deviceLaunchBuffer:1
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+intensors[1]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+
+[2024-03-27 08:24:32.478473] [info] [157891] [ops_runner.cpp:507] ElewiseOpsRunner_0_2:0  finish run all kernel
+[2024-03-27 08:24:32.478481] [info] [157891] [ops_runner.cpp:317] ElewiseOpsRunner_0_2:0  execute end
+[2024-03-27 08:24:32.478488] [info] [157891] [graph_runner.cpp:234] GraphOperationRunner_0:0 execute success
+[2024-03-27 08:24:32.478496] [info] [157891] [operation_base.cpp:473] GraphOperation_0 execute GraphOperationRunner_0x3af5cf50 success
+[2024-03-27 08:24:32.478504] [fatal] [157891] [operation_base.cpp:517] GraphOperation_0 execute statistic:totalTime:1775, streamSyncTime:0, tillingCopyTime:226, kernelExecuteTime:863
+[2024-03-27 08:24:32.505445] [info] [157891] [operation_base.cpp:450] GraphOperation_0 execute start, workspaceSize:16384, variantPack:inTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+inTensors[1]: dtype: 1, format: 2, shape:[4096, 4096], dataSize:33554432
+inTensors[2]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+inTensors[3]: dtype: 1, format: 2, shape:[4096, 4096], dataSize:33554432
+outTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+
+[2024-03-27 08:24:32.505481] [info] [157891] [operation_base.cpp:541] GraphOperation_0 copy host tiling to device start, totalTilingBufferSize:1024
+[2024-03-27 08:24:32.505624] [info] [157891] [operation_base.cpp:552] GraphOperation_0 copy host tiling to device success
+[2024-03-27 08:24:32.505634] [info] [157891] [operation_base.cpp:467] GraphOperation_0 execute GraphOperationRunner_0x3af5cf50 start
+[2024-03-27 08:24:32.505643] [info] [157891] [graph_runner.cpp:206] GraphOperationRunner_0:1  Execute start, runnerGraph_.nodes:3
+[2024-03-27 08:24:32.505651] [info] [157891] [graph_runner.cpp:408] GraphOperationRunner_0:1  update runner variant pack's buffer start
+[2024-03-27 08:24:32.505659] [info] [157891] [graph_runner.cpp:433] GraphOperationRunner_0:1  update runner variant pack's buffer end
+[2024-03-27 08:24:32.505666] [info] [157891] [graph_runner.cpp:450] GraphOperationRunner_0:1  update runner variant pack's tensor data start
+[2024-03-27 08:24:32.505674] [info] [157891] [graph_runner.cpp:455] GraphOperationRunner_0:1  update tensor.data node[0]
+[2024-03-27 08:24:32.505681] [info] [157891] [graph_runner.cpp:464] GraphOperationRunner_0:1  update node[0] intensor[0] is not internal. dataSize:8192
+[2024-03-27 08:24:32.505690] [info] [157891] [graph_runner.cpp:464] GraphOperationRunner_0:1  update node[0] intensor[1] is not internal. dataSize:33554432
+[2024-03-27 08:24:32.505698] [info] [157891] [graph_runner.cpp:472] GraphOperationRunner_0:1  update node[0] outtensor[0] is internal. dataSize:8192
+[2024-03-27 08:24:32.505706] [info] [157891] [graph_runner.cpp:455] GraphOperationRunner_0:1  update tensor.data node[1]
+[2024-03-27 08:24:32.505730] [info] [157891] [graph_runner.cpp:464] GraphOperationRunner_0:1  update node[1] intensor[0] is not internal. dataSize:8192
+[2024-03-27 08:24:32.505739] [info] [157891] [graph_runner.cpp:464] GraphOperationRunner_0:1  update node[1] intensor[1] is not internal. dataSize:33554432
+[2024-03-27 08:24:32.505747] [info] [157891] [graph_runner.cpp:472] GraphOperationRunner_0:1  update node[1] outtensor[0] is internal. dataSize:8192
+[2024-03-27 08:24:32.505755] [info] [157891] [graph_runner.cpp:455] GraphOperationRunner_0:1  update tensor.data node[2]
+[2024-03-27 08:24:32.505763] [info] [157891] [graph_runner.cpp:460] GraphOperationRunner_0:1  update node[2] intensor[0] is internal. dataSize:8192
+[2024-03-27 08:24:32.505770] [info] [157891] [graph_runner.cpp:460] GraphOperationRunner_0:1  update node[2] intensor[1] is internal. dataSize:8192
+[2024-03-27 08:24:32.505778] [info] [157891] [graph_runner.cpp:477] GraphOperationRunner_0:1  update node[2] outtensor[0] is not internal. dataSize:8192
+[2024-03-27 08:24:32.505786] [info] [157891] [graph_runner.cpp:482] GraphOperationRunner_0:1  update runner variant pack's tensor data end
+[2024-03-27 08:24:32.505793] [info] [157891] [graph_runner.cpp:489] GraphOperationRunner_0:1  node[0] execute start, runner:MatmulOpsRunner, variantPack:
+ tilingBufferSize:256, workspaceBufferSize:0, intermediateBufferSize:0
+inTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+inTensors[1]: dtype: 1, format: 2, shape:[4096, 4096], dataSize:33554432
+outTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+
+[2024-03-27 08:24:32.505808] [info] [157891] [ops_runner.cpp:306] MatmulOpsRunner_0_0:1  execute start, totalTilingSize:256, workspaceSize:0, intermediateSize:0
+[2024-03-27 08:24:32.505816] [info] [157891] [ops_runner.cpp:347] MatmulOpsRunner_0_0:1  update node[0] inTensors[0] is not intermeidate. dataSize:8192
+[2024-03-27 08:24:32.505824] [info] [157891] [ops_runner.cpp:347] MatmulOpsRunner_0_0:1  update node[0] inTensors[1] is not intermeidate. dataSize:33554432
+[2024-03-27 08:24:32.505832] [info] [157891] [ops_runner.cpp:359] MatmulOpsRunner_0_0:1  update node[0] outTensors[0] is not intermeidate. dataSize:8192
+[2024-03-27 08:24:32.505841] [info] [157891] [ops_runner.cpp:368] MatmulOpsRunner_0_0:1  update kernel runinfo launch buffer
+[2024-03-27 08:24:32.505847] [info] [157891] [ops_runner.cpp:383] MatmulOpsRunner_0_0:1  update kernel runinfo workspace
+[2024-03-27 08:24:32.505854] [info] [157891] [ops_runner.cpp:490] MatmulOpsRunner_0_0:1  start run all kernel, kernel count:1
+[2024-03-27 08:24:32.505862] [info] [157891] [ops_runner.cpp:516] MatmulOpsRunner_0_0:1  node[0] PpMatMulF16Tactic run start, runinfo:
+opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:256, tilinigId:0, blockDim:16,stream:1, deviceLaunchBuffer:1
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:1
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+
+[2024-03-27 08:24:32.505892] [info] [157891] [bin_tactic.cpp:205] BinTactic FunctionPrepareInOut input 1
+[2024-03-27 08:24:32.505899] [info] [157891] [bin_tactic.cpp:205] BinTactic FunctionPrepareInOut input 1
+[2024-03-27 08:24:32.505906] [info] [157891] [bin_tactic.cpp:238] BinTactic FunctionRun output 1
+[2024-03-27 08:24:32.505913] [info] [157891] [bin_tactic.cpp:170] BinTactic FunctionRun tiling 1
+[2024-03-27 08:24:32.505919] [info] [157891] [bin_tactic.cpp:172] BinTactic FunctionRun arg size 4
+[2024-03-27 08:24:32.505926] [info] [157891] [bin_tactic.cpp:173] BinTactic FunctionRun tilingId 0, blockDim 16
+[2024-03-27 08:24:32.505932] [info] [157891] [bin_tactic.cpp:187] launch function with name
+[2024-03-27 08:24:32.506058] [info] [157891] [ops_runner.cpp:522] MatmulOpsRunner_0_0:1  node[0] PpMatMulF16Tactic run end, runInfo
+:opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:256, tilinigId:0, blockDim:16,stream:1, deviceLaunchBuffer:1
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:1
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+
+[2024-03-27 08:24:32.506090] [info] [157891] [ops_runner.cpp:507] MatmulOpsRunner_0_0:1  finish run all kernel
+[2024-03-27 08:24:32.506098] [info] [157891] [ops_runner.cpp:317] MatmulOpsRunner_0_0:1  execute end
+[2024-03-27 08:24:32.506106] [info] [157891] [graph_runner.cpp:489] GraphOperationRunner_0:1  node[1] execute start, runner:MatmulOpsRunner, variantPack:
+ tilingBufferSize:256, workspaceBufferSize:0, intermediateBufferSize:0
+inTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+inTensors[1]: dtype: 1, format: 2, shape:[4096, 4096], dataSize:33554432
+outTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+
+[2024-03-27 08:24:32.506120] [info] [157891] [ops_runner.cpp:306] MatmulOpsRunner_0_1:1  execute start, totalTilingSize:256, workspaceSize:0, intermediateSize:0
+[2024-03-27 08:24:32.506128] [info] [157891] [ops_runner.cpp:347] MatmulOpsRunner_0_1:1  update node[0] inTensors[0] is not intermeidate. dataSize:8192
+[2024-03-27 08:24:32.506136] [info] [157891] [ops_runner.cpp:347] MatmulOpsRunner_0_1:1  update node[0] inTensors[1] is not intermeidate. dataSize:33554432
+[2024-03-27 08:24:32.506144] [info] [157891] [ops_runner.cpp:359] MatmulOpsRunner_0_1:1  update node[0] outTensors[0] is not intermeidate. dataSize:8192
+[2024-03-27 08:24:32.506152] [info] [157891] [ops_runner.cpp:368] MatmulOpsRunner_0_1:1  update kernel runinfo launch buffer
+[2024-03-27 08:24:32.506159] [info] [157891] [ops_runner.cpp:383] MatmulOpsRunner_0_1:1  update kernel runinfo workspace
+[2024-03-27 08:24:32.506166] [info] [157891] [ops_runner.cpp:490] MatmulOpsRunner_0_1:1  start run all kernel, kernel count:1
+[2024-03-27 08:24:32.506173] [info] [157891] [ops_runner.cpp:516] MatmulOpsRunner_0_1:1  node[0] PpMatMulF16Tactic run start, runinfo:
+opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:256, tilinigId:0, blockDim:16,stream:1, deviceLaunchBuffer:1
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:1
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+
+[2024-03-27 08:24:32.506190] [info] [157891] [bin_tactic.cpp:205] BinTactic FunctionPrepareInOut input 1
+[2024-03-27 08:24:32.506196] [info] [157891] [bin_tactic.cpp:205] BinTactic FunctionPrepareInOut input 1
+[2024-03-27 08:24:32.506203] [info] [157891] [bin_tactic.cpp:238] BinTactic FunctionRun output 1
+[2024-03-27 08:24:32.506209] [info] [157891] [bin_tactic.cpp:170] BinTactic FunctionRun tiling 1
+[2024-03-27 08:24:32.506215] [info] [157891] [bin_tactic.cpp:172] BinTactic FunctionRun arg size 4
+[2024-03-27 08:24:32.506221] [info] [157891] [bin_tactic.cpp:173] BinTactic FunctionRun tilingId 0, blockDim 16
+[2024-03-27 08:24:32.506228] [info] [157891] [bin_tactic.cpp:187] launch function with name
+[2024-03-27 08:24:32.506346] [info] [157891] [ops_runner.cpp:522] MatmulOpsRunner_0_1:1  node[0] PpMatMulF16Tactic run end, runInfo
+:opdesc:opdesc.opName:MatMulOperation opdesc.specificParam: transposeA:0, transposeB:0, oriShape:0,0,0, withBias:0, enDequant:0, hwsync:0, launchBufferSize:256, tilinigId:0, blockDim:16,stream:1, deviceLaunchBuffer:1
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+intensors[1]: dtype:1, format:2, dims:[4096, 4096], dataSize:33554432, pos:0, data:1
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+
+[2024-03-27 08:24:32.506364] [info] [157891] [ops_runner.cpp:507] MatmulOpsRunner_0_1:1  finish run all kernel
+[2024-03-27 08:24:32.506381] [info] [157891] [ops_runner.cpp:317] MatmulOpsRunner_0_1:1  execute end
+[2024-03-27 08:24:32.506389] [info] [157891] [graph_runner.cpp:489] GraphOperationRunner_0:1  node[2] execute start, runner:ElewiseOpsRunner, variantPack:
+ tilingBufferSize:160, workspaceBufferSize:0, intermediateBufferSize:0
+inTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+inTensors[1]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+outTensors[0]: dtype: 1, format: 2, shape:[1, 4096], dataSize:8192
+
+[2024-03-27 08:24:32.506403] [info] [157891] [ops_runner.cpp:306] ElewiseOpsRunner_0_2:1  execute start, totalTilingSize:160, workspaceSize:0, intermediateSize:0
+[2024-03-27 08:24:32.506411] [info] [157891] [ops_runner.cpp:347] ElewiseOpsRunner_0_2:1  update node[0] inTensors[0] is not intermeidate. dataSize:8192
+[2024-03-27 08:24:32.506419] [info] [157891] [ops_runner.cpp:347] ElewiseOpsRunner_0_2:1  update node[0] inTensors[1] is not intermeidate. dataSize:8192
+[2024-03-27 08:24:32.506427] [info] [157891] [ops_runner.cpp:359] ElewiseOpsRunner_0_2:1  update node[0] outTensors[0] is not intermeidate. dataSize:8192
+[2024-03-27 08:24:32.506435] [info] [157891] [ops_runner.cpp:368] ElewiseOpsRunner_0_2:1  update kernel runinfo launch buffer
+[2024-03-27 08:24:32.506441] [info] [157891] [ops_runner.cpp:383] ElewiseOpsRunner_0_2:1  update kernel runinfo workspace
+[2024-03-27 08:24:32.506448] [info] [157891] [ops_runner.cpp:490] ElewiseOpsRunner_0_2:1  start run all kernel, kernel count:1
+[2024-03-27 08:24:32.506455] [info] [157891] [ops_runner.cpp:516] ElewiseOpsRunner_0_2:1  node[0] AddF16Tactic run start, runinfo:
+opdesc:opdesc.opName:ElewiseOperation opdesc.specificParam: elewiseType:8, varAttr:0, inputScale:1, inputOffset:0, roundMode:0, outTensorType:-1, hwsync:0, launchBufferSize:160, tilinigId:210000000, blockDim:2,stream:1, deviceLaunchBuffer:1
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+intensors[1]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+
+[2024-03-27 08:24:32.506479] [info] [157891] [bin_tactic.cpp:205] BinTactic FunctionPrepareInOut input 1
+[2024-03-27 08:24:32.506485] [info] [157891] [bin_tactic.cpp:205] BinTactic FunctionPrepareInOut input 1
+[2024-03-27 08:24:32.506491] [info] [157891] [bin_tactic.cpp:238] BinTactic FunctionRun output 1
+[2024-03-27 08:24:32.506497] [info] [157891] [bin_tactic.cpp:170] BinTactic FunctionRun tiling 1
+[2024-03-27 08:24:32.506503] [info] [157891] [bin_tactic.cpp:172] BinTactic FunctionRun arg size 4
+[2024-03-27 08:24:32.506509] [info] [157891] [bin_tactic.cpp:173] BinTactic FunctionRun tilingId 210000000, blockDim 2
+[2024-03-27 08:24:32.506515] [info] [157891] [bin_tactic.cpp:182] launch function with handle
+[2024-03-27 08:24:32.506637] [info] [157891] [ops_runner.cpp:522] ElewiseOpsRunner_0_2:1  node[0] AddF16Tactic run end, runInfo
+:opdesc:opdesc.opName:ElewiseOperation opdesc.specificParam: elewiseType:8, varAttr:0, inputScale:1, inputOffset:0, roundMode:0, outTensorType:-1, hwsync:0, launchBufferSize:160, tilinigId:210000000, blockDim:2,stream:1, deviceLaunchBuffer:1
+intensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+intensors[1]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+outtensors[0]: dtype:1, format:2, dims:[1, 4096], dataSize:8192, pos:0, data:1
+
+[2024-03-27 08:24:32.506657] [info] [157891] [ops_runner.cpp:507] ElewiseOpsRunner_0_2:1  finish run all kernel
+[2024-03-27 08:24:32.506664] [info] [157891] [ops_runner.cpp:317] ElewiseOpsRunner_0_2:1  execute end
+[2024-03-27 08:24:32.506671] [info] [157891] [graph_runner.cpp:234] GraphOperationRunner_0:1 execute success
+[2024-03-27 08:24:32.506678] [info] [157891] [operation_base.cpp:473] GraphOperation_0 execute GraphOperationRunner_0x3af5cf50 success
+[2024-03-27 08:24:32.506685] [fatal] [157891] [operation_base.cpp:517] GraphOperation_0 execute statistic:totalTime:1244, streamSyncTime:0, tillingCopyTime:134, kedipu device will show as cuda device. if it's not expected behavior, please set env DIPU_PYTHON_DEVICE_AS_CUDA=false
+before compute!!
+tensor([[-0.3386, -0.5688, -0.1954,  ..., -0.7568, -0.0238,  0.5679]],
+       device='cuda', dtype=torch.float16)
+tensor([[-0.9526,  0.5171,  1.1426,  ...,  0.3464,  0.3118,  0.6416]],
+       device='cuda', dtype=torch.float16)
+tensor([[ 0.9053, -0.6553, -1.0869,  ...,  0.4514, -1.4795,  0.3735]],
+       device='cuda', dtype=torch.float16)
+a1 ptr: 0x124041200000
+b1 ptr: 0x124041c00000
+a2 ptr: 0x124041202000
+b2 ptr: 0x124043e00000
+out ptr: 0x124041204000
+
+989012480
+after compute!!
+tensor([[ -11.4609,  -52.3125,   46.0000,  ..., -100.5625,  -72.6875,
+           52.9062]], device='cuda', dtype=torch.float16)
+
+after compute!!
+tensor([[0., 0., 0.,  ..., 0., 0., 0.]], device='cuda', dtype=torch.float16)
+
+pytorch out:
+tensor([[ -11.4587,  -52.3301,   45.9845,  ..., -100.5453,  -72.6959,
+           52.9040]], device='cuda')
+rnelExecuteTime:481
